@@ -13,20 +13,30 @@
 ###  Hyprland setup
 ```🔥
 ~/.config/hypr/
-hypr.d
+├── application-style.conf
+├── colors.conf
+├── hypr.d
+│   ├── animations
+│   │   ├── animations-fast.conf
+│   │   └── animations-optimized.conf
+│   ├── animations.conf
+│   ├── colors.conf
 │   ├── core
 │   │   ├── env.conf
 │   │   ├── general.conf
 │   │   └── monitors.conf
 │   ├── core.conf
-│   ├── dev
-│   │   ├── ai.conf
-│   │   ├── debug.conf
-│   │   └── test.conf
-│   ├── dev.conf
-│   ├── display
+│   ├── debug
+│   │   ├── gtk_debug.conf
+│   │   ├── hypr_debug.conf
+│   │   ├── intel_debug.conf
+│   │   ├── mesa_debug.conf
+│   │   ├── nvidia_debug.conf
+│   │   ├── opengl_debug.conf
+│   │   └── vulkan_debug.conf
+│   ├── debug.conf
+│   ├── decorations
 │   │   ├── decoration.conf
-│   │   ├── graphics.conf
 │   │   ├── hyprpaper.conf
 │   │   ├── shaders
 │   │   │   ├── chromatic_abberation.frag
@@ -35,14 +45,27 @@ hypr.d
 │   │   │   ├── extradark.frag
 │   │   │   ├── invert.frag
 │   │   │   └── solarized.frag
-│   │   ├── wp
-│   │   │   └── wall0.png
-│   │   └── x11.conf
-│   ├── display.conf
+│   │   └── wp
+│   │       └── wall0.png
+│   ├── decorations.conf
 │   ├── exec
 │   │   ├── apps.conf
 │   │   └── start.conf
 │   ├── exec.conf
+│   ├── experimental
+│   │   ├── hypr_experimental.conf
+│   │   └── test.conf
+│   ├── experimental.conf
+│   ├── graphics
+│   │   ├── angle.conf
+│   │   ├── gtk.conf
+│   │   ├── hypr_graphics.conf
+│   │   ├── intel.conf
+│   │   ├── mesa.conf
+│   │   ├── nvidia.conf
+│   │   ├── vulkan.conf
+│   │   └── x11.conf
+│   ├── graphics.conf
 │   ├── input
 │   │   ├── cursor.conf
 │   │   ├── device.conf
@@ -57,8 +80,6 @@ hypr.d
 │   ├── layouts
 │   │   ├── dwindle.conf
 │   │   ├── gestures.conf
-│   │   ├── hypridle.conf
-│   │   ├── hyprlock.conf
 │   │   ├── lockdead.png
 │   │   ├── master.conf
 │   │   ├── misc.conf
@@ -66,18 +87,24 @@ hypr.d
 │   ├── layouts.conf
 │   ├── media
 │   │   ├── animations.conf
-│   │   ├── pipe.conf
+│   │   ├── pipewire.conf
 │   │   └── render.conf
 │   ├── media.conf
+│   ├── ml
+│   │   ├── intel.conf
+│   │   └── tensorflow.conf
+│   ├── ml.conf
 │   ├── rules
 │   │   ├── layer_rules.conf
 │   │   ├── window_rules.conf
 │   │   └── workspaces_rules.conf
 │   └── rules.conf
+├── hypridle.conf
 ├── hyprland.conf
-├── LICENSE-AGPL
-├── LICENSE-QCDA
-└── README.md
+├── hyprlock
+│   └── status.sh
+└── hyprlock.conf
+18 directories, 74 files
 ```
 ---
 
@@ -330,7 +357,4 @@ By offering both open source and commercial licensing options, we strive to crea
 
 ![Repository Views](https://komarev.com/ghpvc/?qompassai/Hyprland)
 
-<p align="center">
-  <i>Last Updated: <timestamp></i>
-</p>
 
