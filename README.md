@@ -2,13 +2,22 @@
 
 ## Template for 🔥 projects
 
-  <a href="https://www.gnu.org/licenses/agpl-3.0">
-    <img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3">
-  </a>
-  <a href="./LICENSE-QCDA">
-    <img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA">
-  </a>
+<a href="https://hyprland.org/">
+  <img src="https://img.shields.io/badge/Hyprland-5C7AEA?style=for-the-badge" alt="Hyprland">
+</a>
+<br>
+<a href="https://wiki.hyprland.org/">
+  <img src="https://img.shields.io/badge/Hyprland_Documentation-blue?style=flat-square" alt="Hyprland Documentation">
+</a>
+<a href="https://github.com/topics/hyprland">
+  <img src="https://img.shields.io/badge/Hyprland_Tutorials-green?style=flat-square" alt="Hyprland Tutorials">
+</a>
+<br>
+  <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3"></a>
+  <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
 </p>
+
+![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
 
 ###  Hyprland setup
 ```🔥
