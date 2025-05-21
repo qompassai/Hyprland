@@ -18,6 +18,8 @@
 </p>
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Hyprland/total?style=flat-square)
+
 
 ###  Hyprland setup
 ```🔥
