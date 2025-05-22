@@ -1,6 +1,14 @@
-# Qompass AI Hyprland Setup
+<!-- /qompassai/Hyprland/README.md -->
+<!-- --------------------------------- -->
+<!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
 
-## Template for 🔥 projects
+<h2> Qompass AI on Hyprland </h2>
+
+<h3> Hyprland: Lightweight protocol for your wayland needs </h3>
+
+![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
+![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Hyprland/total?style=flat-square)
+
 
 <a href="https://hyprland.org/">
   <img src="https://img.shields.io/badge/Hyprland-5C7AEA?style=for-the-badge" alt="Hyprland">
@@ -16,10 +24,6 @@
   <a href="https://www.gnu.org/licenses/agpl-3.0"><img src="https://img.shields.io/badge/License-AGPL%20v3-blue.svg" alt="License: AGPL v3"></a>
   <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
 </p>
-
-![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
-![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Hyprland/total?style=flat-square)
-
 
 ###  Hyprland setup
 ```🔥
