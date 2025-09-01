@@ -29,99 +29,106 @@
 ###  Hyprland setup
 ```🔥
 ~/.config/hypr/
-├── application-style.conf
-├── colors.conf
-├── hypr.d
-│   ├── animations
-│   │   ├── animations-fast.conf
-│   │   └── animations-optimized.conf
-│   ├── animations.conf
-│   ├── colors.conf
-│   ├── core
-│   │   ├── env.conf
-│   │   ├── general.conf
-│   │   └── monitors.conf
-│   ├── core.conf
-│   ├── debug
-│   │   ├── gtk_debug.conf
-│   │   ├── hypr_debug.conf
-│   │   ├── intel_debug.conf
-│   │   ├── mesa_debug.conf
-│   │   ├── nvidia_debug.conf
-│   │   ├── opengl_debug.conf
-│   │   └── vulkan_debug.conf
-│   ├── debug.conf
-│   ├── decorations
-│   │   ├── decoration.conf
-│   │   ├── hyprpaper.conf
-│   │   ├── shaders
-│   │   │   ├── chromatic_abberation.frag
-│   │   │   ├── crt.frag
-│   │   │   ├── drugs.frag
-│   │   │   ├── extradark.frag
-│   │   │   ├── invert.frag
-│   │   │   └── solarized.frag
-│   │   └── wp
-│   │       └── wall0.png
-│   ├── decorations.conf
-│   ├── exec
-│   │   ├── apps.conf
-│   │   └── start.conf
-│   ├── exec.conf
-│   ├── experimental
-│   │   ├── hypr_experimental.conf
-│   │   └── test.conf
-│   ├── experimental.conf
-│   ├── graphics
-│   │   ├── angle.conf
-│   │   ├── gtk.conf
-│   │   ├── hypr_graphics.conf
-│   │   ├── intel.conf
-│   │   ├── mesa.conf
-│   │   ├── nvidia.conf
-│   │   ├── vulkan.conf
-│   │   └── x11.conf
-│   ├── graphics.conf
-│   ├── input
-│   │   ├── cursor.conf
-│   │   ├── device.conf
-│   │   └── inputenv.conf
-│   ├── input.conf
-│   ├── keybinds
-│   │   ├── gen_bindings.conf
-│   │   ├── media_bindings.conf
-│   │   ├── util_bindings.conf
-│   │   └── workspace_bindings.conf
-│   ├── keybinds.conf
-│   ├── layouts
-│   │   ├── dwindle.conf
-│   │   ├── gestures.conf
-│   │   ├── lockdead.png
-│   │   ├── master.conf
-│   │   ├── misc.conf
-│   │   └── plugins.conf
-│   ├── layouts.conf
-│   ├── media
-│   │   ├── animations.conf
-│   │   ├── pipewire.conf
-│   │   └── render.conf
-│   ├── media.conf
-│   ├── ml
-│   │   ├── intel.conf
-│   │   └── tensorflow.conf
-│   ├── ml.conf
-│   ├── rules
-│   │   ├── layer_rules.conf
-│   │   ├── window_rules.conf
-│   │   └── workspaces_rules.conf
-│   └── rules.conf
-├── hypridle.conf
-├── hyprland.conf
-├── hyprlock
-│   └── status.sh
-└── hyprlock.conf
-18 directories, 74 files
-```
+└── hypr
+    ├── application-style.conf
+    ├── colors.conf
+    ├── hypr.d
+    │   ├── animations
+    │   │   ├── animations-fast.conf
+    │   │   └── animations-optimized.conf
+    │   ├── animations.conf
+    │   ├── colors.conf
+    │   ├── core
+    │   │   ├── env.conf
+    │   │   ├── general.conf
+    │   │   └── monitors.conf
+    │   ├── core.conf
+    │   ├── debug
+    │   │   ├── gtk_debug.conf
+    │   │   ├── hypr_debug.conf
+    │   │   ├── intel_debug.conf
+    │   │   ├── mesa_debug.conf
+    │   │   ├── nvidia_debug.conf
+    │   │   ├── opengl_debug.conf
+    │   │   └── vulkan_debug.conf
+    │   ├── debug.conf
+    │   ├── decorations
+    │   │   ├── decoration.conf
+    │   │   └── shaders
+    │   │       ├── chromatic_abberation.frag
+    │   │       ├── crt.frag
+    │   │       ├── drugs.frag
+    │   │       ├── extradark.frag
+    │   │       ├── invert.frag
+    │   │       └── solarized.frag
+    │   ├── decorations.conf
+    │   ├── exec
+    │   │   ├── apps.conf
+    │   │   └── start.conf
+    │   ├── exec.conf
+    │   ├── experimental
+    │   │   ├── hypr_experimental.conf
+    │   │   └── test.conf
+    │   ├── experimental.conf
+    │   ├── graphics
+    │   │   ├── google.conf
+    │   │   ├── gtk.conf
+    │   │   ├── hypr_graphics.conf
+    │   │   ├── intel.conf
+    │   │   ├── mesa.conf
+    │   │   ├── nvidia.conf
+    │   │   ├── proton.conf
+    │   │   ├── unreal.conf
+    │   │   ├── vulkan.conf
+    │   │   └── x11.conf
+    │   ├── graphics.conf
+    │   ├── input
+    │   │   ├── cursor.conf
+    │   │   ├── device.conf
+    │   │   └── inputenv.conf
+    │   ├── input.conf
+    │   ├── keybinds
+    │   │   ├── gen_bindings.conf
+    │   │   ├── media_bindings.conf
+    │   │   ├── net_bindings.conf
+    │   │   ├── util_bindings.conf
+    │   │   └── workspace_bindings.conf
+    │   ├── keybinds.conf
+    │   ├── layouts
+    │   │   ├── dwindle.conf
+    │   │   ├── gestures.conf
+    │   │   ├── lockdead.png
+    │   │   ├── master.conf
+    │   │   ├── misc.conf
+    │   │   └── plugins.conf
+    │   ├── layouts.conf
+    │   ├── media
+    │   │   ├── animations.conf
+    │   │   ├── ecosystem.conf
+    │   │   ├── pipewire.conf
+    │   │   └── render.conf
+    │   ├── media.conf
+    │   ├── rules
+    │   │   ├── layer_rules.conf
+    │   │   ├── window_rules.conf
+    │   │   └── workspaces_rules.conf
+    │   ├── rules.conf
+    │   └── wallpaper
+    │       ├── hyprpaper.conf
+    │       └── wp
+    │           └── wall0.png
+    ├── hypridle.conf
+    ├── hyprland.conf
+    ├── hyprlock
+    │   └── status.sh
+    ├── hyprlock.conf
+    └── scripts
+        ├── mirrorlist.txt
+        └── qm.sh
+
+20 directories, 77 files
+
+20 directories, 77 files```
 ---
 
 <details>
