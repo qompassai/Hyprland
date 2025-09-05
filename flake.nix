@@ -6,7 +6,7 @@
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     nixos-stable.url = "github:nixos/nixpkgs/nixos-25.05";
   };
-  outputs = { self, flake-schemas, nixpkgs-unstable, nixos-stable, ... }:
+  outputs = { self, flake-schemas, nixpkgs, nixpkgs-unstable, nixos-stable, ... }:
     let
       supportedSystems = [ "x86_64-linux" "aarch64-darwin" "aarch64-linux" ];
       forEachSupportedSystem = f: nixpkgs.lib.genAttrs supportedSystems (system: f {
