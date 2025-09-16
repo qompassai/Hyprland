@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-# /qompassai/hyprland/scripts/ps
+# /qompassai/hyprland/hypr/hypr.d/media/ps.sh
 # Qompass AI Hyprland Media Services Script
 # Copyright (C) 2025 Qompass AI, All rights reserved
 ####################################################
