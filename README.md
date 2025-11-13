@@ -140,9 +140,8 @@
     ├── ps.sh
     └── qm.sh
 
-18 directories, 93 files    
-
-18 directories, 93 files```
+18 directories, 93 files
+```
 
 ---
 
