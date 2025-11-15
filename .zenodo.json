@@ -1,12 +1,12 @@
 {
-  "title": "Hyprland",
+  "title": "hyprland",
   "description": "Qompass AI Hyprland Setup",
   "license": "Q-CDA-1.0",
   "language": "eng",
   "upload_type": "software",
   "access_right": "open",
-  "version": "v2025-10-20-2-ga0ea5a0",
-  "publication_date": "2025-10-22",
+  "version": "v2025-10-20-9-g3cccef2",
+  "publication_date": "2025-11-15",
   "creators": [
     {
       "name": "Porter, Matthew A.",
@@ -17,10 +17,10 @@
   ],
   "keywords": ["AI","Education","Healthcare","Post-Quantum Cryptography","Quantum","opensource","software"],
   "related_identifiers": [
-    { "identifier": "https://github.com/qompassai/Hyprland", "relation": "isSupplementTo", "resource_type": "software" },
-    { "identifier": "https://github.com/qompassai/Hyprland/releases/tag/v2025-10-22", "relation": "isIdenticalTo", "resource_type": "software" },
+    { "identifier": "https://github.com/qompassai/hyprland", "relation": "isSupplementTo", "resource_type": "software" },
+    { "identifier": "https://github.com/qompassai/hyprland/releases/tag/v2025-11-15", "relation": "isIdenticalTo", "resource_type": "software" },
     { "identifier": "https://orcid.org/0000-0002-0302-4812", "relation": "isAuthorOf", "resource_type": "person" },
-    { "identifier": "https://github.com/qompassai/Hyprland/actions", "relation": "isCompiledBy", "resource_type": "workflow" },
+    { "identifier": "https://github.com/qompassai/hyprland/actions", "relation": "isCompiledBy", "resource_type": "workflow" },
     { "identifier": "https://loop.frontiersin.org/people/2230223", "relation": "isAuthorOf", "resource_type": "person" },
     { "identifier": "https://www.webofscience.com/wos/author/HNQ-0292-2023", "relation": "isIdenticalTo", "resource_type": "person" },
     { "identifier": "https://www.scopus.com/authid/detail.uri?authorId=57385910700", "relation": "isIdenticalTo", "resource_type": "person" }
