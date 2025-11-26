@@ -1,5 +1,0 @@
-ERR 2025-10-05T11:10:11.155 ui.343417  tui_stop:641: TUI already stopped (race?)
-ERR 2025-10-05T11:10:13.906 nvim.345015.0 loop_close:170: uv_loop_close() hang?
-[--I] signal   0x555b8300fee8
-[-AI] async    0x555b8300fd30
-[R--] timer    0x555b8424a6e0
