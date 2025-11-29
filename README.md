@@ -31,7 +31,7 @@
 
 ### Qompass AI Hyprland setup
 
-```🔥
+```hypr
 ~/.config/hypr
 ###############
 ├── application-style.conf
@@ -166,7 +166,7 @@
 │   └── qm.sh
 └── xdph.conf
 
-20 directories, 112 files  
+20 directories, 112 files
 
 ```
 
