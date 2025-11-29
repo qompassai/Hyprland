@@ -31,7 +31,7 @@
 
 ### Qompass AI Hyprland setup
 
-````🔥
+```🔥
 ~/.config/hypr
 ###############
 ├── application-style.conf
