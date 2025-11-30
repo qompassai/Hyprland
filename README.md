@@ -1,9 +1,6 @@
 <!-- --------/qompassai/Hyprland/README.md --------------->
-
 <!-- ----------Qompass AI Hyprland ----------------------->
-
 <!-- Copyright (C) 2025 Qompass AI, All rights reserved -->
-
 <!-------------------------------------------------------->
 
 <h2> Qompass AI on Hyprland </h2>
@@ -12,7 +9,6 @@
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Hyprland/total?style=flat-square)
-
 <p align="center">
 <a href="https://hyprland.org/">
   <img src="https://img.shields.io/badge/Hyprland-5C7AEA?style=for-the-badge" alt="Hyprland">
@@ -29,21 +25,17 @@
   <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
 </p>
 
-### Qompass AI Hyprland setup
-
-```hypr
+###  Qompass AI Hyprland setup
+```🔥
 ~/.config/hypr
 ###############
-├── application-style.conf
+├├── application-style.conf
 ├── citation.bib
 ├── CITATION.cff
+├── colors.conf
 ├── flake.lock
 ├── flake.nix
 ├── hypr.d
-│   ├── animations
-│   │   ├── animations-fast.conf
-│   │   └── animations-optimized.conf
-│   ├── animations.conf
 │   ├── colors.conf
 │   ├── core
 │   │   ├── env.conf
@@ -57,8 +49,6 @@
 │   │   ├── mesa_debug.conf
 │   │   ├── nvidia_debug.conf
 │   │   ├── opengl_debug.conf
-│   │   ├── proton_debug.conf
-│   │   ├── qt_debug.conf
 │   │   └── vulkan_debug.conf
 │   ├── debug.conf
 │   ├── decorations
@@ -80,9 +70,6 @@
 │   │   └── test.conf
 │   ├── experimental.conf
 │   ├── graphics
-│   │   ├── angle.conf
-│   │   ├── aq.conf
-│   │   ├── electron.conf
 │   │   ├── google.conf
 │   │   ├── gtk.conf
 │   │   ├── hypr_graphics.conf
@@ -104,7 +91,6 @@
 │   │   └── inputenv.conf
 │   ├── input.conf
 │   ├── keybinds
-│   │   ├── binds.conf
 │   │   ├── gen_bindings.conf
 │   │   ├── media_bindings.conf
 │   │   ├── net_bindings.conf
@@ -114,7 +100,6 @@
 │   ├── layouts
 │   │   ├── dwindle.conf
 │   │   ├── gestures.conf
-│   │   ├── groups.conf
 │   │   ├── lockdead.png
 │   │   ├── master.conf
 │   │   ├── misc.conf
@@ -126,14 +111,9 @@
 │   │   ├── animations-optimized.conf
 │   │   ├── audio.conf
 │   │   ├── ecosystem.conf
-│   │   ├── pipewire.conf
 │   │   ├── render.conf
 │   │   └── video.conf
 │   ├── media.conf
-│   ├── ml
-│   │   ├── intel.conf
-│   │   └── tensorflow.conf
-│   ├── ml.conf
 │   ├── rules
 │   │   ├── layer_rules.conf
 │   │   ├── window_rules.conf
@@ -145,30 +125,24 @@
 │           └── wall0.png
 ├── hypridle.conf
 ├── hyprland.conf
-├── hyprlauncher.conf
 ├── hyprlock
 │   └── status.sh
 ├── hyprlock.conf
 ├── hyprqt6engine.conf
-├── hyprsunset.conf
-├── hyprtoolkit.conf
 ├── LICENSE-AGPL
 ├── LICENSE-QCDA
 ├── qompass.jpg
 ├── README.md
-├── renovate.jsonc
 ├── rustrland.toml
-├── scripts
-│   ├── cache_setup.sh
-│   ├── gamemode.sh
-│   ├── mirrorlist.txt
-│   ├── ps.sh
-│   └── qm.sh
-└── xdph.conf
+└── scripts
+    ├── cache_setup.sh
+    ├── mirrorlist.txt
+    ├── ps.sh
+    └── qm.sh
 
-20 directories, 112 files
+18 directories, 93 files    
 
-```
+18 directories, 93 files```
 
 ---
 
@@ -427,4 +401,3 @@ By offering both open source and commercial licensing options, we strive to crea
 [end_4's Hyprland dotfiles](https://github.com/end-4/dots-hyprland) #GPL 3-0
 
 
-````
