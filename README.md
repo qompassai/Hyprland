@@ -29,14 +29,12 @@
 ```🔥
 ~/.config/hypr
 ###############
-├├── application-style.conf
+├── application-style.conf
 ├── citation.bib
 ├── CITATION.cff
-├── colors.conf
 ├── flake.lock
 ├── flake.nix
 ├── hypr.d
-│   ├── colors.conf
 │   ├── core
 │   │   ├── env.conf
 │   │   ├── general.conf
@@ -49,6 +47,9 @@
 │   │   ├── mesa_debug.conf
 │   │   ├── nvidia_debug.conf
 │   │   ├── opengl_debug.conf
+│   │   ├── proton_debug.conf
+│   │   ├── qt_debug.conf
+│   │   ├── sdl_debug.conf
 │   │   └── vulkan_debug.conf
 │   ├── debug.conf
 │   ├── decorations
@@ -70,6 +71,8 @@
 │   │   └── test.conf
 │   ├── experimental.conf
 │   ├── graphics
+│   │   ├── aq.conf
+│   │   ├── electron.conf
 │   │   ├── google.conf
 │   │   ├── gtk.conf
 │   │   ├── hypr_graphics.conf
@@ -78,6 +81,7 @@
 │   │   ├── nvidia.conf
 │   │   ├── proton.conf
 │   │   ├── qt.conf
+│   │   ├── README.md
 │   │   ├── sdl.conf
 │   │   ├── unreal.conf
 │   │   ├── vulkan.conf
@@ -91,7 +95,7 @@
 │   │   └── inputenv.conf
 │   ├── input.conf
 │   ├── keybinds
-│   │   ├── gen_bindings.conf
+│   │   ├── binds.conf
 │   │   ├── media_bindings.conf
 │   │   ├── net_bindings.conf
 │   │   ├── util_bindings.conf
@@ -100,6 +104,7 @@
 │   ├── layouts
 │   │   ├── dwindle.conf
 │   │   ├── gestures.conf
+│   │   ├── groups.conf
 │   │   ├── lockdead.png
 │   │   ├── master.conf
 │   │   ├── misc.conf
@@ -111,9 +116,14 @@
 │   │   ├── animations-optimized.conf
 │   │   ├── audio.conf
 │   │   ├── ecosystem.conf
+│   │   ├── pipewire.conf
 │   │   ├── render.conf
 │   │   └── video.conf
 │   ├── media.conf
+│   ├── ml
+│   │   ├── intel.conf
+│   │   └── tensorflow.conf
+│   ├── ml.conf
 │   ├── rules
 │   │   ├── layer_rules.conf
 │   │   ├── window_rules.conf
@@ -125,24 +135,30 @@
 │           └── wall0.png
 ├── hypridle.conf
 ├── hyprland.conf
+├── hyprlauncher.conf
 ├── hyprlock
 │   └── status.sh
 ├── hyprlock.conf
 ├── hyprqt6engine.conf
+├── hyprsunset.conf
+├── hyprtoolkit.conf
 ├── LICENSE-AGPL
 ├── LICENSE-QCDA
 ├── qompass.jpg
 ├── README.md
+├── renovate.jsonc
 ├── rustrland.toml
-└── scripts
-    ├── cache_setup.sh
-    ├── mirrorlist.txt
-    ├── ps.sh
-    └── qm.sh
+├── scripts
+│   ├── cache_setup.sh
+│   ├── gamemode.sh
+│   ├── mirrorlist.txt
+│   ├── ps.sh
+│   └── qm.sh
+└── xdph.conf
 
-18 directories, 93 files    
+19 directories, 108 files
+```
 
-18 directories, 93 files```
 
 ---
 
