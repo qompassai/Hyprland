@@ -76,7 +76,7 @@
     <tbody>
       <tr>
         <td>aq.conf</td>
-        <td>Aquamarine renderer + multi‑GPU routing for Hyprland</td>
+        <td>Aquamarine(AQ) renderer + multi‑GPU routing for Hyprland</td>
         <td>AQ_DRM_DEVICES, AQ_RENDER_BACKEND, AQ_MGPU_NO_EXPLICIT</td>
       </tr>
       <tr>
@@ -91,7 +91,7 @@
       </tr>
       <tr>
         <td>gtk.conf</td>
-        <td>GTK 3 / 4 graphics backend and scaling under Wayland</td>
+        <td>Gnome ToolKit (GTK) 2/3/4 graphics backend</td>
         <td>GDK_BACKEND, GSK_RENDERER, GTK_THEME, GTK_IM_MODULE</td>
       </tr>
       <tr>
