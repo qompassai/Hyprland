@@ -472,16 +472,15 @@
   <li><code>VK_KHR_PRESENT_WAIT_ENABLED</code> – enable <code>VK_KHR_present_wait</code> usage (<code>0</code> / <code>1</code>).</li>
   <li><code>VK_PRESENT_MODE</code> – preferred present mode (<code>mailbox</code>, <code>fifo</code>, <code>immediate</code>, etc.).</li>
   <li><code>VK_WSI_MODE</code> – preferred WSI integration (<code>wayland</code>, <code>xcb</code>, <code>xlib</code>).</li>
-  <ul>
-    <li><code>ANGLE_DEFAULT_PLATFORM</code> – <code>vulkan</code>, <code>opengl</code>, etc.</li>
-    <li><code>ANGLE_FEATURE_OVERRIDES_ENABLED</code> – e.g. <code>prefer_vulkan</code>.</li>
-    <li><code>ANGLE_PLATFORM</code> / <code>ANGLE_PLATFORM_FEATURES</code> – ANGLE backend + features.</li>
-    <li><code>GDK_DISABLE</code> / <code>GDK_VULKAN_DISABLE</code> – disable specific GTK graphics features.</li>
-    <li><code>VK_ICD_FILENAMES</code> – explicit driver JSONs list.</li>
-    <li><code>\_\_VK_LAYER_NV_optimus</code> – e.g. <code>NVIDIA_only</code> for Optimus routing.</li>
-    <li><code>VK_LAYER_PATH</code> / <code>VK_LOADER_DISABLE_LAYER_MESA</code> / <code>VK_LOADER_LAYERS_DISABLE</code> – loader layer control.</li>
-    <li><code>MESA_VK_DEVICE_SELECT</code> – force specific GPU (e.g. <code>pci:10de:2820</code>).</li>
-    <li><code>VK_INSTANCE_LAYERS</code> – explicit layers list (e.g. <code>VK_LAYER_MESA_device_select</code>).</li>
+  <li><code>ANGLE_DEFAULT_PLATFORM</code> – <code>vulkan</code>, <code>opengl</code>, etc.</li>
+  <li><code>ANGLE_FEATURE_OVERRIDES_ENABLED</code> – e.g. <code>prefer_vulkan</code>.</li>
+  <li><code>ANGLE_PLATFORM</code> / <code>ANGLE_PLATFORM_FEATURES</code> – ANGLE backend + features.</li>
+  <li><code>GDK_DISABLE</code> / <code>GDK_VULKAN_DISABLE</code> – disable specific GTK graphics features.</li>
+  <li><code>VK_ICD_FILENAMES</code> – explicit driver JSONs list.</li>
+  <li><code>\_\_VK_LAYER_NV_optimus</code> – e.g. <code>NVIDIA_only</code> for Optimus routing.</li>
+  <li><code>VK_LAYER_PATH</code> / <code>VK_LOADER_DISABLE_LAYER_MESA</code> / <code>VK_LOADER_LAYERS_DISABLE</code> – loader layer control.</li>
+  <li><code>MESA_VK_DEVICE_SELECT</code> – force specific GPU (e.g. <code>pci:10de:2820</code>).</li>
+  <li><code>VK_INSTANCE_LAYERS</code> – explicit layers list (e.g. <code>VK_LAYER_MESA_device_select</code>).</li>
   </ul>
 </ul>
 </blockquote>
