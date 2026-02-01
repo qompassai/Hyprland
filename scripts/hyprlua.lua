@@ -5,13 +5,13 @@
 ---@diagnostic enable: spell-check
 ---@version Lua5.1, JIT
 ---@class HyprRule
----@field type "int"|"float"|"bool"|"enum"|"vec2"|"str"
+---@field type 'int'|'float'|'bool'|'enum'|'vec2'|'str'
 ---@field values? string[]
 ---@field min? number
 ---@field max? number
 ---@type table<string, table<string, HyprRule>>
 ---@alias ItemType 'flag'|'selector'|'variable'
----@alias RuleType "windowrule"|"layerrule"
+---@alias RuleType 'windowrule'|'layerrule'
 ---@class Item
 ---@field key string
 ---@field value string
@@ -39,42 +39,42 @@ local replacements_keys = {
 }
 ---@type table<string,string>
 local replacements_values = {
-    bordersize = 'border_size',
-    bordercolor = 'border_color',
-    roundingpower = 'rounding_power',
-    noborder = 'border_size',
-    noanim = 'no_anim',
-    noblur = 'no_blur',
-    nodim = 'no_dim',
-    noshadow = 'no_shadow',
-    norounding = 'no_rounding',
-    nofocus = 'no_focus',
-    nofollowmouse = 'no_follow_mouse',
+    abovelock = 'above_lock',
     allowsinput = 'allows_input',
-    focusonactivate = 'focus_on_activate',
-    fullscreenstate = 'fullscreen_state',
-    maxsize = 'max_size',
-    minsize = 'min_size',
-    nomaxsize = 'no_max_size',
-    keepaspectratio = 'keep_aspect_ratio',
-    idleinhibit = 'idle_inhibit',
-    persistentsize = 'persistent_size',
-    stayfocused = 'stay_focused',
+    blurpopups = 'blur_popups',
+    bordercolor = 'border_color',
+    bordersize = 'border_size',
     dimaround = 'dim_around',
-    noclosefor = 'no_close_for',
-    suppressevent = 'suppress_event',
+    focusonactivate = 'focus_on_activate',
     forcergbx = 'force_rgbx',
-    syncfullscreen = 'sync_fullscreen',
-    renderunfocused = 'render_unfocused',
-    scrollmouse = 'scroll_mouse',
-    scrolltouchpad = 'scroll_touchpad',
-    noshortcutsinhibit = 'no_shortcuts_inhibit',
-    noscreenshare = 'no_screen_share',
-    novrr = 'no_vrr',
+    fullscreenstate = 'fullscreen_state',
+    idleinhibit = 'idle_inhibit',
     ignorealpha = 'ignore_alpha',
     ignorezero = 'ignore_alpha',
-    blurpopups = 'blur_popups',
-    abovelock = 'above_lock',
+    keepaspectratio = 'keep_aspect_ratio',
+    maxsize = 'max_size',
+    minsize = 'min_size',
+    noanim = 'no_anim',
+    noblur = 'no_blur',
+    noborder = 'border_size',
+    noclosefor = 'no_close_for',
+    nodim = 'no_dim',
+    nofocus = 'no_focus',
+    nofollowmouse = 'no_follow_mouse',
+    nomaxsize = 'no_max_size',
+    norounding = 'no_rounding',
+    noscreenshare = 'no_screen_share',
+    noshadow = 'no_shadow',
+    noshortcutsinhibit = 'no_shortcuts_inhibit',
+    novrr = 'no_vrr',
+    persistentsize = 'persistent_size',
+    renderunfocused = 'render_unfocused',
+    roundingpower = 'rounding_power',
+    scrollmouse = 'scroll_mouse',
+    scrolltouchpad = 'scroll_touchpad',
+    stayfocused = 'stay_focused',
+    suppressevent = 'suppress_event',
+    syncfullscreen = 'sync_fullscreen',
 }
 ---@type table<string,string>
 local defaults = {
@@ -458,12 +458,10 @@ local function parse_part(part)
             },
         }
     end
-
     local value = table.concat(tokens, ' ', 2) ~= '' and table.concat(tokens, ' ', 2) or defaults[key] or 'on'
 
     return { { key = key, value = value, type = 'flag', error = false } }
 end
-
 ---@param line string
 ---@return Rule|nil
 local function parse_line(line)
@@ -542,7 +540,6 @@ end
 ---@return Rule[]
 local function merge_rules(rules)
     local merged = {} ---@type table<string, Rule>
-
     for _, r in ipairs(rules) do
         local sig = rule_signature(r)
         if not merged[sig] then
@@ -739,7 +736,6 @@ end
 ---@return boolean, string?
 local function check_value(rule, raw)
     local v = trim(unquote(raw))
-
     if rule.type == 'int' then
         if not is_int(v) then
             return false, 'expected int, got \'' .. raw .. '\''
@@ -851,11 +847,9 @@ local function lint_file(path)
                 end
             end
         end
-
         ::continue::
     end
     f:close()
-
     if #errors == 0 then
         print(path .. ': OK')
         return true
