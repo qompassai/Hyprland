@@ -1,0 +1,52 @@
+#!/usr/bin/env lua
+-- workspace_bindings.lua
+-- Qompass AI Hyprland Config (auto-converted by h2l)
+-- Copyright (C) 2026 Qompass AI, All rights reserved
+-- NOTE: Review FIXME comments before use
+
+-- /qompassai/hyprland/hypr/hypr.d/keybinds/workspace_bindings.conf
+-- Qompass AI Workspace Keybindings Config
+-- Copyright (C) 2025 Qompass AI, All rights reserved
+-- ###################################################
+local mainMod = 'SUPER'
+hl.bind('CTRL SUPER + Left', 'workspace', 'r-1')
+hl.bind('CTRL SUPER + mouse_down', 'workspace', 'r-1')
+hl.bind('CTRL SUPER + mouse_up', 'workspace', 'r+1')
+hl.bind('CTRL SUPER + Right', 'workspace', 'r+1')
+hl.bind('CTRL SUPER + period', 'togglespecialworkspace')
+hl.bind('CTRL SUPER ALT + Left', 'workspace', 'm-1')
+hl.bind('CTRL SUPER ALT + Right', 'workspace', 'm+1')
+hl.bind('CTRL SUPER ALT + Right', 'workspace', 'm+1')
+hl.bind('CTRL SUPER ALT + Left', 'workspace', 'm-1')
+hl.bind('CTRL SUPER SHIFT + Up', 'movetoworkspacesilent', 'special')
+hl.bind('CTRL SUPER SHIFT + Right', 'movetoworkspace', 'r+1')
+hl.bind('CTRL SUPER SHIFT + Left', 'movetoworkspace', 'r-1')
+hl.bind('CTRL SUPER + [', 'workspace', '-1')
+hl.bind('CTRL SUPER + ]', 'workspace', '+1')
+hl.bind('CTRL SUPER + Up', 'workspace', 'r-5')
+hl.bind('CTRL SUPER + Down', 'workspace', 'r+5')
+hl.bind('SUPER + 1', 'workspace', '1')
+hl.bind('SUPER + 2', 'workspace', '2')
+hl.bind('SUPER + 3', 'workspace', '3')
+hl.bind('SUPER + 4', 'workspace', '4')
+hl.bind('SUPER + 5', 'workspace', '5')
+hl.bind('SUPER + 6', 'workspace', '6')
+hl.bind('SUPER + 7', 'workspace', '7')
+hl.bind('SUPER + 8', 'workspace', '8')
+hl.bind('SUPER + 9', 'workspace', '9')
+hl.bind('SUPER + M', 'movetoworkspace', '+0')
+hl.bind('SUPER + M', 'movetoworkspace', 'special:magic')
+hl.bind('SUPER + M', 'togglespecialworkspace', 'magic')
+hl.bind('SUPER + mouse_down', 'workspace', 'e+1')
+hl.bind('SUPER + mouse_down', 'workspace', '-1')
+hl.bind('SUPER + mouse_up', 'workspace', 'e-1')
+hl.bind('SUPER + mouse_up', 'workspace', '+1')
+hl.bind('SUPER + mouse:275', 'togglespecialworkspace')
+hl.bind('SUPER + Page_Down', 'workspace', '+1')
+hl.bind('SUPER + Page_Up', 'workspace', '-1')
+hl.bind('SUPER ALT + mouse_down', 'movetoworkspace', '-1')
+hl.bind('SUPER ALT + mouse_up', 'movetoworkspace', '+1')
+hl.bind('SUPER + TAB', 'togglespecialworkspace')
+hl.bind('SUPER + mouse:275', 'togglespecialworkspace')
+hl.bind('SUPER SHIFT + mouse_down', 'movetoworkspace', 'r-1')
+hl.bind('SUPER SHIFT + mouse_up', 'movetoworkspace', 'r+1')

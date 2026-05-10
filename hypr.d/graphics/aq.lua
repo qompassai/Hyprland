@@ -1,0 +1,20 @@
+#!/usr/bin/env lua
+-- aq.lua
+-- Qompass AI Hyprland Config (auto-converted by h2l)
+-- Copyright (C) 2026 Qompass AI, All rights reserved
+-- NOTE: Review FIXME comments before use
+
+-- /qompassai/hyprland/hypr.d/graphics/aq.conf
+-- Qompass AI Hyprland Aquamarine Graphics Config
+-- Copyright (C) 2025 Qompass AI, All rights reserved
+-- ###################################################
+-- Reference: https://wiki.hypr.land/Hypr-Ecosystem/aquamarine/
+-- lspci | grep -i -E 'vga|3d|2d'
+-- ls -l /dev/dri/by-path/
+-- lspci -v -s 00:02.0
+-- lspci -v -s 01:00.0
+hl.env('AQ_DRM_DEVICES', '/dev/dri/card2:/dev/dri/card1')
+-- env = AQ_DRM_DEVICES                                 , /dev/dri/by-path/pci-0000:00:02.0-card:/dev/dri/by-path/pci-0000:01:00.0-card
+hl.env('AQ_MGPU_NO_EXPLICIT', '1')
+-- env = AQ_NO_MODIFIERS                                , 1
+hl.env('AQ_RENDER_BACKEND', 'gl')

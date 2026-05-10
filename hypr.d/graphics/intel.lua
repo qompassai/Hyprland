@@ -1,0 +1,57 @@
+#!/usr/bin/env lua
+-- intel.lua
+-- Qompass AI Hyprland Config (auto-converted by h2l)
+-- Copyright (C) 2026 Qompass AI, All rights reserved
+-- NOTE: Review FIXME comments before use
+
+-- /qompassai/hyprland/hypr/hypr.d/graphics/intel.conf
+-- Qompass AI Hyprland Intel Config
+-- Copyright (C) 2025 Qompass AI, All rights reserved
+-- ###################################################
+-- Intel Reference |  https://intel.github.io/llvm/EnvironmentVariables.html,
+
+
+hl.env('ONEAPI_DEVICE_SELECTOR', 'level_zero:gpu;!*:cpu;!llvmpipe:*')
+-- env = ONEAPI_DEVICE_SELECTOR ,                                                  opencl:*
+hl.env('SYCL_CACHE_DIR', '~/.cache/libsycl_cache')
+hl.env('SYCL_CACHE_IN_MEM', '1')
+hl.env('SYCL_CACHE_MAX_DEVICE_IMAGE_SIZE', '536870912')
+hl.env('SYCL_CACHE_MAX_SIZE', '8192')
+hl.env('SYCL_CACHE_MIN_DEVICE_IMAGE_SIZE', '4096')
+hl.env('SYCL_CACHE_PERSISTENT', '1')
+hl.env('SYCL_CACHE_THRESHOLD', '7')
+-- env = SYCL_DEVICE_ALLOWLIST,DeviceVendorId:0x10de,DeviceType:GPU,DeviceName:NVIDIA.*,DriverVersion:570.123.07|DeviceVendorId:0x8086,DeviceType:GPU,DeviceName:Intel.*,DriverVersion:25.0.4
+hl.env('SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP', '1')
+hl.env('SYCL_DISABLE_PARALLEL_FOR_RANGE_ROUNDING', '1')
+hl.env('SYCL_DUMP_IMAGES', '1')
+hl.env('SYCL_EAGER_INIT', '1')
+hl.env('SYCL_HOST_UNIFIED_MEMORY', '1')
+hl.env('SYCL_IN_MEM_CACHE_EVICTION_THRESHOLD', '536870912')
+hl.env('SYCL_JIT_AMDGCN_PTX_KERNELS', '1')
+hl.env('SYCL_PARALLEL_FOR_RANGE_ROUNDING_TRACE', '1')
+hl.env('SYCL_PI_HIP_MAX_LOCAL_MEM_SIZE', '65536')
+hl.env('SYCL_PI_LEVEL_ZERO_BATCH_SIZE', '0')
+hl.env('SYCL_PI_LEVEL_ZERO_COMMANDLISTS_CLEANUP_THRESHOLD', '20')
+hl.env('SYCL_PI_LEVEL_ZERO_DEVICE_SCOPE_EVENTS', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_IMMEDIATE_COMMANDLISTS_EVENT_CLEANUP_THRESHOLD', '1000')
+hl.env('SYCL_PI_LEVEL_ZERO_REUSE_DISCARDED_EVENTS', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_SINGLE_ROOT_DEVICE_BUFFER_MIGRATION', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_TRACK_INDIRECT_ACCESS_MEMORY', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE_FOR_D2D_COPY', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_USE_COPY_ENGINE_FOR_FILL', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_USE_IMMEDIATE_COMMANDLISTS', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_USE_MULTIPLE_COMMANDLIST_BARRIERS', '1')
+hl.env('SYCL_PI_LEVEL_ZERO_USM_ALLOCATOR', '1;32M;host:1M,4,64K;device:1M,4,64K;shared:0,0,2M')
+hl.env('SYCL_PI_LEVEL_ZERO_USM_RESIDENT', '0x002')
+hl.env('SYCL_PI_LEVEL_ZERO_USE_NATIVE_USM_MEMCPY2D', '1')
+hl.env('SYCL_PRINT_EXECUTION_GRAPH', 'always')
+-- FIXME(env): env = SYCL_PROGRAM_APPEND_COMPILE_OPTIONS ,
+-- FIXME(env): env = SYCL_PROGRAM_APPEND_LINK_OPTIONS ,
+-- FIXME(env): env = SYCL_PROGRAM_COMPILE_OPTIONS ,
+-- FIXME(env): env = SYCL_PROGRAM_LINK_OPTIONS ,
+hl.env('SYCL_QUEUE_THREAD_POOL_SIZE', '4')
+hl.env('SYCL_REDUCTION_PREFERRED_WORKGROUP_SIZE', 'gpu:128')
+hl.env('SYCL_UR_USE_LEVEL_ZERO_V2', '1')
+hl.env('SYCL_USM_HOSTPTR_IMPORT', '1')
+hl.env('SYCL_UR_CUDA_ENABLE_IMAGE_SUPPORT', '1')
+hl.env('SYCL_PI_CUDA_MAX_LOCAL_MEM_SIZE', '49152')

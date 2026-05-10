@@ -1,0 +1,40 @@
+#!/usr/bin/env lua
+-- input.lua
+-- Qompass AI Hyprland Config (auto-converted by h2l)
+-- Copyright (C) 2026 Qompass AI, All rights reserved
+-- NOTE: Review FIXME comments before use
+
+-- Control your input devices
+-- See https://wiki.hypr.land/Configuring/Variables/#input
+-- Scroll nicely in the terminal
+hl.windowrule('scrolltouchpad 1.5, class:(Alacritty|kitty)')
+hl.windowrule('scrolltouchpad 0.2, class:com.mitchellh.ghostty')
+-- Enable touchpad gestures for changing workspaces
+-- See https://wiki.hyprland.org/Configuring/Gestures/
+-- gesture = 3, horizontal, workspace
+
+hl.config({
+    input = {
+        -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt
+        -- kb_layout = us,dk,eu
+        kb_layout = 'us',
+        kb_options = 'compose:caps',  -- ,grp:alts_toggle
+        -- Change speed of keyboard repeat
+        repeat_rate = 40,
+        repeat_delay = 600,
+        -- Start with numlock on by default
+        numlock_by_default = true,
+        -- Increase sensitivity for mouse/trackpad (default: 0)
+        -- sensitivity = 0.35
+        touchpad = {
+            -- Use natural (inverse) scrolling
+            -- natural_scroll = true
+            -- Use two-finger clicks for right-click instead of lower-right corner
+            -- clickfinger_behavior = true
+            -- Control the speed of your scrolling
+            scroll_factor = 0.4,
+            -- Left-click-and-drag with three fingers
+            -- drag_3fg = 1
+        },
+    },
+})

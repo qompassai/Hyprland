@@ -1,0 +1,65 @@
+#!/usr/bin/env lua
+-- apps.lua
+-- Qompass AI Hyprland Config (auto-converted by h2l)
+-- Copyright (C) 2026 Qompass AI, All rights reserved
+-- NOTE: Review FIXME comments before use
+
+-- /qompassai/hyprland/hypr.d/exec/apps.conf
+-- Qompass AI Executable Apps Config
+-- Copyright (C) 2025 Qompass AI, All rights reserved
+-- ###################################################
+local app_drawer = [[hyprlauncher --dmenu < <(find ~/.local/share/applications /usr/share/applications -name '*.desktop' | xargs grep -l Name= | xargs)]]
+local blue = 'termshark'
+local blue2 = 'wireshark'
+local bt = 'bluetui'
+local bt2 = 'blueman-manager'
+local calendar = 'khal interactive'
+local cite = 'Zotero'
+local color_picker = 'hyprpicker'
+local clipboard = 'wl-copy'
+local dis = 'vesktop'
+local dis2 = 'discordo'
+local editor = 'nvim'
+local emoji = 'hypremoji'
+local entry_background_color = 'rgba(41000311)'
+local entry_border_color = 'rgba(896E6C55)'
+local entry_color = 'rgba(FFDAD6FF)'
+local font_family = 'DaddyTimeMono Nerd Font Mono'
+local font_family_clock = 'DaddyTimeMono Nerd Font Mono'
+local font_material_symbols = 'Material Symbols Rounded'
+local launcher = 'hyprlauncher'
+local lock = 'hyprlock'
+local logout = 'hyprctl dispatch exit'
+local files = 'dolphin'
+local menu = 'fuzzel --dmenu'
+local tele = 'ithil'
+local tele2 = 'Telegram'
+local music = 'ncspot'
+local network = 'nmtui'
+local notify = 'makoctl'
+local notify_action_menu = [[makoctl menu wofi -d -p 'Choose Action: ']]
+local notify_default = 'makoctl mode -s default'
+local pass_man = 'pass'
+local password_menu = 'pass | fuzzel --dmenu | xargs pass show'
+local pdf = 'Zathura'
+local record = 'obs'
+local record2 = 'audacity'
+local stats = 'btop'
+local screen_share = 'xdg-desktop-portal-hyprland'
+local screenshot = 'hyprshot -m region'
+local text_color = 'rgba(FFDAD6FF)'
+local term = 'ghostty'
+local term2 = 'foot'
+local update = 'pkcon update'
+local usb = 'usbview'
+local voice = 'hyprvoice'
+local vol_ctrl = 'wiremix'
+local vol_ctrl2 = 'hyprpwcenter'
+local vol_down = 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-'
+local vol_mute = 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
+local volume_up = 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'
+local wp = 'hyprpaper'
+local weather = 'wttr.in'
+local web = 'firefox'
+local web2 = 'google-chrome-canary'
+local window_switcher = 'bemenu-run --window-mode'
