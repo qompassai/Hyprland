@@ -1,14 +1,10 @@
-#!/usr/bin/env lua
--- layer_rules.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/rules/layer_rules.conf
--- Qompass AI Hyprland Layer Rules Config
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr/hypr.d/rules/layer_rules.lua
+-- Qompass AI Hyprland 0.55+ Layer Rules Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- References: https://wiki.hypr.land/Configuring/Window-Rules/#layer-rules
+---@source https://wiki.hypr.land/Configuring/Window-Rules/#layer-rules
 layerrule = 'animation fade,               match:namespace         hyprpaper'
 layerrule = 'animation fade,               match:namespace         notifications'
 layerrule = 'animation fade,               match:namespace         selection'

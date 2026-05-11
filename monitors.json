@@ -1,0 +1,46 @@
+{
+  "workspaces": [
+    {
+      "name": "Default",
+      "monitors": {
+        "desc:LG Electronics LG ULTRAGEAR 302MXUN93406": {
+          "resolution": "2560x1440",
+          "refresh_rate": 143.933,
+          "scale": 1.0,
+          "rotation": 0,
+          "position_x": 8416,
+          "position_y": 0,
+          "is_primary": false
+        },
+        "eDP-2": {
+          "resolution": "1920x1200",
+          "refresh_rate": 144.00101,
+          "scale": 1.0,
+          "rotation": 0,
+          "position_x": 6464,
+          "position_y": 0,
+          "is_primary": false
+        },
+        "desc:LG Electronics LG ULTRAGEAR 304MXYG8C258": {
+          "resolution": "2560x1440",
+          "refresh_rate": 143.933,
+          "scale": 1.0,
+          "rotation": 0,
+          "position_x": 0,
+          "position_y": 0,
+          "is_primary": false
+        },
+        "desc:LG Electronics LG HDR DQHD 0x0008986E": {
+          "resolution": "3840x1080",
+          "refresh_rate": 59.996,
+          "scale": 1.0,
+          "rotation": 0,
+          "position_x": 2592,
+          "position_y": 0,
+          "is_primary": true
+        }
+      }
+    }
+  ],
+  "active_workspace": 0
+}

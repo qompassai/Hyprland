@@ -7,13 +7,20 @@
 
 <h3> Hyprland: Lightweight protocol for your wayland needs </h3>
 
+> ⚠️ **Work in Progress** — Actively migrating from hyprlang `.conf` to Lua 5.4. Both `.conf` and `.lua` files coexist during transition.
+
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Hyprland/total?style=flat-square)
+
 <p align="center">
 <a href="https://hyprland.org/">
-  <img src="https://img.shields.io/badge/Hyprland-5C7AEA?style=for-the-badge" alt="Hyprland">
+  <img src="https://img.shields.io/badge/Hyprland-0.55+-5C7AEA?style=for-the-badge" alt="Hyprland 0.55+">
+</a>
+<a href="https://www.lua.org/versions.html">
+  <img src="https://img.shields.io/badge/Lua-5.4-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua 5.4">
 </a>
 <br>
+  <img src="https://img.shields.io/badge/Status-WIP-orange?style=flat-square" alt="WIP">
 <a href="https://wiki.hyprland.org/">
   <img src="https://img.shields.io/badge/Hyprland_Documentation-blue?style=flat-square" alt="Hyprland Documentation">
 </a>
@@ -25,141 +32,174 @@
   <a href="./LICENSE-QCDA"><img src="https://img.shields.io/badge/license-Q--CDA-lightgrey.svg" alt="License: Q-CDA"></a>
 </p>
 
-###  Qompass AI Hyprland setup
-```🔥
+### Qompass AI Hyprland setup
+
+Config is organized as parallel `.conf` (legacy hyprlang) and `.lua` (Hyprland 0.55+ native) files. The `h2l.py` script automates conversion from hyprlang to Lua during migration (also WiP)
+
+```text
 ~/.config/hypr
 ###############
 ├── application-style.conf
 ├── citation.bib
 ├── CITATION.cff
+├── CITATION.lua
 ├── flake.lock
 ├── flake.nix
+├── h2l.py                          
 ├── hypr.d
-│   ├── core
-│   │   ├── env.conf
-│   │   ├── general.conf
-│   │   └── monitors.conf
-│   ├── core.conf
-│   ├── debug
-│   │   ├── gtk_debug.conf
-│   │   ├── hypr_debug.conf
-│   │   ├── intel_debug.conf
-│   │   ├── mesa_debug.conf
-│   │   ├── nvidia_debug.conf
-│   │   ├── opengl_debug.conf
-│   │   ├── proton_debug.conf
-│   │   ├── qt_debug.conf
-│   │   ├── sdl_debug.conf
-│   │   └── vulkan_debug.conf
-│   ├── debug.conf
-│   ├── decorations
-│   │   ├── decoration.conf
-│   │   └── shaders
-│   │       ├── chromatic_abberation.frag
-│   │       ├── crt.frag
-│   │       ├── drugs.frag
-│   │       ├── extradark.frag
-│   │       ├── invert.frag
-│   │       └── solarized.frag
-│   ├── decorations.conf
-│   ├── exec
-│   │   ├── apps.conf
-│   │   └── start.conf
-│   ├── exec.conf
-│   ├── experimental
-│   │   ├── hypr_experimental.conf
-│   │   └── test.conf
-│   ├── experimental.conf
-│   ├── graphics
-│   │   ├── aq.conf
-│   │   ├── electron.conf
-│   │   ├── google.conf
-│   │   ├── gtk.conf
-│   │   ├── hypr_graphics.conf
-│   │   ├── intel.conf
-│   │   ├── mesa.conf
-│   │   ├── nvidia.conf
-│   │   ├── proton.conf
-│   │   ├── qt.conf
-│   │   ├── README.md
-│   │   ├── sdl.conf
-│   │   ├── unreal.conf
-│   │   ├── vulkan.conf
-│   │   └── x11.conf
-│   ├── graphics.conf
-│   ├── input
-│   │   ├── cursor.conf
-│   │   ├── device.conf
-│   │   ├── gesture.conf
-│   │   ├── input.conf
-│   │   └── inputenv.conf
-│   ├── input.conf
-│   ├── keybinds
-│   │   ├── binds.conf
-│   │   ├── media_bindings.conf
-│   │   ├── net_bindings.conf
-│   │   ├── util_bindings.conf
-│   │   └── workspace_bindings.conf
-│   ├── keybinds.conf
-│   ├── layouts
-│   │   ├── dwindle.conf
-│   │   ├── gestures.conf
-│   │   ├── groups.conf
-│   │   ├── lockdead.png
-│   │   ├── master.conf
-│   │   ├── misc.conf
-│   │   └── plugins.conf
-│   ├── layouts.conf
-│   ├── media
-│   │   ├── animations.conf
-│   │   ├── animations-fast.conf
-│   │   ├── animations-optimized.conf
-│   │   ├── audio.conf
-│   │   ├── ecosystem.conf
-│   │   ├── pipewire.conf
-│   │   ├── render.conf
-│   │   └── video.conf
-│   ├── media.conf
-│   ├── ml
-│   │   ├── intel.conf
-│   │   └── tensorflow.conf
-│   ├── ml.conf
-│   ├── rules
-│   │   ├── layer_rules.conf
-│   │   ├── window_rules.conf
-│   │   └── workspaces_rules.conf
-│   ├── rules.conf
-│   └── wallpaper
-│       ├── hyprpaper.conf
-│       └── wp
-│           └── wall0.png
+│   ├── colors.conf
+│   ├── core
+│   │   ├── env.conf
+│   │   ├── env.lua
+│   │   ├── general.conf
+│   │   ├── general.lua
+│   │   ├── monitors.conf
+│   │   ├── monitors.lua
+│   │   ├── version.conf
+│   │   └── version.lua
+│   ├── core.conf
+│   ├── core.lua
+│   ├── debug
+│   │   ├── gtk_debug.{conf,lua}
+│   │   ├── hypr_debug.{conf,lua}
+│   │   ├── intel_debug.{conf,lua}
+│   │   ├── mesa_debug.{conf,lua}
+│   │   ├── nvidia_debug.{conf,lua}
+│   │   ├── opengl_debug.{conf,lua}
+│   │   ├── proton_debug.{conf,lua}
+│   │   ├── qt_debug.{conf,lua}
+│   │   ├── sdl_debug.{conf,lua}
+│   │   └── vulkan_debug.{conf,lua}
+│   ├── debug.conf
+│   ├── debug.lua
+│   ├── decorations
+│   │   ├── decoration.conf
+│   │   ├── decoration.lua
+│   │   └── shaders
+│   │       ├── chromatic_abberation.frag
+│   │       ├── crt.frag
+│   │       ├── drugs.frag
+│   │       ├── extradark.frag
+│   │       ├── invert.frag
+│   │       └── solarized.frag
+│   ├── decorations.conf
+│   ├── decorations.lua
+│   ├── exec
+│   │   ├── apps.{conf,lua}
+│   │   └── start.{conf,lua}
+│   ├── exec.conf
+│   ├── exec.lua
+│   ├── experimental
+│   │   ├── hypr_experimental.{conf,lua}
+│   │   └── test.{conf,lua}
+│   ├── experimental.conf
+│   ├── experimental.lua
+│   ├── graphics
+│   │   ├── aq.{conf,lua}
+│   │   ├── electron.{conf,lua}
+│   │   ├── google.{conf,lua}
+│   │   ├── gtk.{conf,lua}
+│   │   ├── hypr_graphics.{conf,lua}
+│   │   ├── input.{conf,lua}
+│   │   ├── intel.{conf,lua}
+│   │   ├── mesa.{conf,lua}
+│   │   ├── moz.{conf,lua}
+│   │   ├── nvidia.{conf,lua}
+│   │   ├── proton.{conf,lua}
+│   │   ├── qt.{conf,lua}
+│   │   ├── README.md
+│   │   ├── sdl.{conf,lua}
+│   │   ├── unreal.{conf,lua}
+│   │   ├── vulkan.{conf,lua}
+│   │   └── x11.{conf,lua}
+│   ├── graphics.conf
+│   ├── graphics.lua
+│   ├── input
+│   │   ├── cursor.{conf,lua}
+│   │   ├── device.{conf,lua}
+│   │   ├── gesture.{conf,lua}
+│   │   ├── input.{conf,lua}
+│   │   └── inputenv.{conf,lua}
+│   ├── input.conf
+│   ├── input.lua
+│   ├── keybinds
+│   │   ├── binds.{conf,lua}
+│   │   ├── h2l.lua
+│   │   ├── media_bindings.{conf,lua}
+│   │   ├── net_bindings.{conf,lua}
+│   │   ├── util_bindings.{conf,lua}
+│   │   └── workspace_bindings.{conf,lua}
+│   ├── keybinds.conf
+│   ├── keybinds.lua
+│   ├── layouts
+│   │   ├── dwindle.{conf,lua}
+│   │   ├── gestures.{conf,lua}
+│   │   ├── groups.{conf,lua}
+│   │   ├── lockdead.png
+│   │   ├── master.{conf,lua}
+│   │   ├── misc.{conf,lua}
+│   │   └── plugins.{conf,lua}
+│   ├── layouts.conf
+│   ├── layouts.lua
+│   ├── media
+│   │   ├── animations.{conf,lua}
+│   │   ├── animations-fast.{conf,lua}
+│   │   ├── animations-optimized.{conf,lua}
+│   │   ├── audio.{conf,lua}
+│   │   ├── ecosystem.{conf,lua}
+│   │   ├── quirks.{conf,lua}
+│   │   └── render.{conf,lua}
+│   ├── media.conf
+│   ├── media.lua
+│   ├── rules
+│   │   ├── layer_rules.{conf,lua}
+│   │   ├── window_rules.{conf,lua}
+│   │   └── workspaces_rules.{conf,lua}
+│   ├── rules.conf
+│   ├── rules.lua
+│   └── wallpaper
+│       ├── hyprpaper.conf
+│       ├── hyprpaper.lua
+│       └── wp
+│           └── wall0.png
 ├── hypridle.conf
 ├── hyprland.conf
+├── hyprland.lua
+├── hyprland.pc.in
 ├── hyprlauncher.conf
 ├── hyprlock
-│   └── status.sh
+│   └── status.sh
 ├── hyprlock.conf
 ├── hyprqt6engine.conf
 ├── hyprsunset.conf
 ├── hyprtoolkit.conf
+├── launch.jsonc
 ├── LICENSE-AGPL
 ├── LICENSE-QCDA
+├── monitors.conf
+├── monitors.json
 ├── qompass.jpg
 ├── README.md
 ├── renovate.jsonc
 ├── rustrland.toml
 ├── scripts
-│   ├── cache_setup.sh
-│   ├── gamemode.sh
-│   ├── mirrorlist.txt
-│   ├── ps.sh
-│   └── qm.sh
+│   ├── cache_setup.sh
+│   ├── fix.py
+├   ├── h2l.py                     # hyprlang → Lua converter
+│   ├── gamemode.sh
+│   ├── hyprlua.lua
+│   ├── mirrorlist.txt
+│   ├── ps.sh
+│   └── qm.sh
+├── shaders
+│   └── *.glsl -> /usr/share/aether/shaders/*.glsl
+├── tree.md
 └── xdph.conf
 
-19 directories, 108 files
+19 directories, 330 files
+```   
+
 ```
-
-
 ---
 
 <details>

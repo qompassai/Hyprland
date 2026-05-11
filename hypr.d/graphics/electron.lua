@@ -1,11 +1,6 @@
 #!/usr/bin/env lua
--- electron.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/graphics/electron.conf
--- Qompass AI Hyprland Electron Graphics Config
+-- /qompassai/hyprland/hypr.d/graphics/electron.lua
+-- Qompass AI Hyprland 0.55+ Electron Graphics Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 hl.env('ELECTRON_ENABLE_LOGGING', '1')
