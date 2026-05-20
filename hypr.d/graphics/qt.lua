@@ -1,12 +1,8 @@
-#!/usr/bin/env lua
--- qt.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/dotfiles/.config/hypr/hypr.d/graphics/qt.lua
+-- Qompass AI Hyprland 0.55+ QT Graphics Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/dotfiles/.config/hypr/hypr.d/graphics/qt.conf
--- Qompass AI Hyprland QT Graphics Config
--- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###########################################################
 -- References: https://wiki.hypr.land/Configuring/Environment-variables/ | QT- https://doc.qt.io/qt-6/highdpi.html#environment-variable-reference
 hl.env('QML_IMPORT_PATH', '/usr/lib/qt6/qml:~/.local/share/qml:~/.config/qml')
@@ -35,7 +31,7 @@ hl.env('QT_QUICK_CONTROLS_UNIVERSAL_FOREGROUND', '')
 hl.env('QT_QUICK_CONTROLS_UNIVERSAL_THEME', 'Dark')
 hl.env('QT_SCALE_FACTOR', '1')
 hl.env('QT_SCALE_FACTOR_ROUNDING_POLICY', 'PassThrough')
--- env = QT_SCREEN_SCALE_FACTORS                           , "DP-2=1;DP-1=1;eDP-2=1.5;HDMI-A-1=1"
--- env = QT_USE_PHYSICAL_DPI                                , 1
+-- hl.env(QT_SCREEN_SCALE_FACTORS, "DP-2=1;DP-1=1;eDP-2=1.5;HDMI-A-1=1")
+-- hl.env(QT_USE_PHYSICAL_DPI, 1)
 hl.env('QT_WAYLAND_DISABLE_WINDOWDECORATION', '1')
 hl.env('QT_XCB_GL_INTEGRATION', 'xcb_egl')

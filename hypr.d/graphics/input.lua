@@ -1,9 +1,4 @@
 #!/usr/bin/env lua
--- input.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
 -- Control your input devices
 -- See https://wiki.hypr.land/Configuring/Variables/#input
 -- Scroll nicely in the terminal
@@ -15,7 +10,6 @@ hl.windowrule('scrolltouchpad 0.2, class:com.mitchellh.ghostty')
 
 hl.config({
     input = {
-        -- Use multiple keyboard layouts and switch between them with Left Alt + Right Alt
         -- kb_layout = us,dk,eu
         kb_layout = 'us',
         kb_options = 'compose:caps',  -- ,grp:alts_toggle

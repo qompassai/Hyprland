@@ -1,11 +1,6 @@
 #!/usr/bin/env lua
--- env.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/core/env.conf
--- Qompass AI Hyprland Core Environment Config
+-- /qompassai/hyprland/hypr.d/core/env.lua
+-- Qompass AI Hyprland 0.55+ Core Environment Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 hl.env('XDG_CACHE_HOME', '/home/phaedrus/.cache')

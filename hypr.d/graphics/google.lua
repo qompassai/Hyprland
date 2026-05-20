@@ -1,11 +1,6 @@
 #!/usr/bin/env lua
--- google.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/graphics/google.conf
--- Qompass AI Hyprland Google Graphics Config
+-- /qompassai/hyprland/hypr/hypr.d/graphics/google.lua
+-- Qompass AI Hyprland 0.55+ Google Graphics Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 -- env = ANGLE_PLATFORM                              , vulkan
@@ -18,4 +13,3 @@ hl.env('TF_CPP_MIN_LOG_LEVEL', '2')
 hl.env('TF_ENABLE_ONEDNN_OPTS', '0')
 hl.env('TF_INTRA_OP_PARALLELISM_THREADS', '4')
 hl.env('TF_INTER_OP_PARALLELISM_THREADS', '4')
-

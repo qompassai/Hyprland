@@ -1,13 +1,8 @@
-#!/usr/bin/env lua
--- start.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/exec/start.conf
--- Qompass AI Executable Start Config
+#!/usr/bin/env lua5.4
+-- /qompassai/hyprland/hypr.d/exec/start.lua
+-- Qompass AI Hyprland 0.55+ Executable Start Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
--- ###################################################
+-- -----------------------------------------------------
 hl.exec_once('systemctl --user start hyprpolkitagent &')
 -- exec-once = /usr/lib/hyprpolkitagent/hyprpolkitagent
 hl.exec_once('systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP')
@@ -16,10 +11,18 @@ hl.exec_once('dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_C
 -- exec-once = dbus-update-activation-environment --systemd --all
 hl.exec_once('/usr/lib/xdg-desktop-portal')
 hl.exec_once('xdg-desktop-portal-hyprland')
-hl.exec_once('mkdir -p ~/.cache/{mesa_shader_cache_db,nvidia/{GLCache,ComputeCache/{TensorRT,engine_cache}},vulkan/{pipeline_cache,shader_cache},opencl-cache,tensorrt/{engine_cache,timing_cache},UnrealEngine/{ShaderCache,BinaryCache},hyprland/{logs,tmp},xdg-desktop-portal-wlr,xdg-desktop-portal}')
-hl.exec_once('mkdir -p ~/.local/share/{vulkan/{implicit_layer.d,config.d,settings.d,icd.d,explicit_layer.d,registry},UnrealEngine/Common/{DerivedDataCache,ShaderCache},pocl/cuda}')
-hl.exec_once('chmod 755 ~/.cache/{mesa_shader_cache_db,nvidia,vulkan,UnrealEngine,mesa_shader_cache/{ShaderCache,BinaryCache},opencl-cache,tensorrt,hyprland}')
-hl.exec_once('chmod 755 ~/.local/share/{vulkan,UnrealEngine,UnrealEngine/Common,UnrealEngine/Common/{DerivedDataCache,ShaderCache},pocl}')
+hl.exec_once(
+    'mkdir -p ~/.cache/{mesa_shader_cache_db,nvidia/{GLCache,ComputeCache/{TensorRT,engine_cache}},vulkan/{pipeline_cache,shader_cache},opencl-cache,tensorrt/{engine_cache,timing_cache},UnrealEngine/{ShaderCache,BinaryCache},hyprland/{logs,tmp},xdg-desktop-portal-wlr,xdg-desktop-portal}'
+)
+hl.exec_once(
+    'mkdir -p ~/.local/share/{vulkan/{implicit_layer.d,config.d,settings.d,icd.d,explicit_layer.d,registry},UnrealEngine/Common/{DerivedDataCache,ShaderCache},pocl/cuda}'
+)
+hl.exec_once(
+    'chmod 755 ~/.cache/{mesa_shader_cache_db,nvidia,vulkan,UnrealEngine,mesa_shader_cache/{ShaderCache,BinaryCache},opencl-cache,tensorrt,hyprland}'
+)
+hl.exec_once(
+    'chmod 755 ~/.local/share/{vulkan,UnrealEngine,UnrealEngine/Common,UnrealEngine/Common/{DerivedDataCache,ShaderCache},pocl}'
+)
 hl.exec_once('systemctl --user start pipewire &')
 hl.exec_once('systemctl --user start wireplumber &')
 hl.exec_once('systemctl --user start pipewire-pulse &')

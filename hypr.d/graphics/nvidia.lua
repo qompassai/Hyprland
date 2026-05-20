@@ -1,21 +1,16 @@
 #!/usr/bin/env lua
--- nvidia.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/graphics/nvidia.conf
--- Qompass AI Hyprland NVIDIA Config
+-- /qompassai/hyprland/hypr/hypr.d/graphics/nvidia.lua
+-- Qompass AI Hyprland 0.55+ NVIDIA Graphics Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
--- ###################################################
+-------------------------------------------------------
 -- References: https://download.nvidia.com/XFree86/Linux-x86_64/570.133.07/README/openglenvvariables.html
 hl.env('CUDA_VISIBLE_DEVICES', '0,1,2,3,4')
--- env = DRI_PRIME                                 , 1 # individual offload
--- env = DRI_PRIME_RENDER_OFFLOAD                  , 1
+-- hl.env(DRI_PRIME, 1) -- individual offload, global if active
+-- hl.env(DRI_PRIME_RENDER_OFFLOAD, 1)
 hl.env('GBM_BACKEND', 'nvidia-drm')
 hl.env('__GL_ALLOW_FLIPPING', '1')
 hl.env('__GL_ALLOW_UNOFFICIAL_PROTOCOL', '1')
--- env = __GL_CACHE_MAX_SIZE,#Not setting lets it be unlimited
+-- hl.env(__GL_CACHE_MAX_SIZE, )#Not setting lets it be unlimited
 hl.env('__GL_GSYNC_ALLOWED', '1')
 hl.env('__GL_MAX_FRAME_AGE', '3')
 hl.env('__GL_MaxFramesAllowed', '1')
@@ -23,10 +18,10 @@ hl.env('__GL_SHADER_DISK_CACHE_PATH', '/home/phaedrus/.cache/nvidia/GLCache')
 hl.env('__GL_SHADER_DISK_CACHE', '1')
 hl.env('__GL_SHADER_DISK_CACHE_SKIP_CLEANUP', '1')
 hl.env('__GL_SYNC_TO_VBLANK', '1')
--- env = __GL_THREADED_OPTIMIZATIONS              , 1 ###black screen crashout
+-- hl.env(__GL_THREADED_OPTIMIZATIONS, 1) --black screen crashout
 hl.env('__GL_VRR_ALLOWED', '1')
 hl.env('__GLX_VENDOR_LIBRARY_NAME', 'nvidia')
--- env = __NV_PRIME_RENDER_OFFLOAD_PROVIDER       , NVIDIA-G0 # browser crash
+-- hl.env(__NV_PRIME_RENDER_OFFLOAD_PROVIDER, NVIDIA-G0) # browser crash
 hl.env('NVD_BACKEND', 'direct')
 hl.env('VK_LAYER_NV_optimus', '1')
 hl.env('__GL_ALLOW_FXAA_USAGE', '1')

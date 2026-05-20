@@ -1,15 +1,9 @@
-#!/usr/bin/env lua
--- general.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
+#!/usr/bin/env lua5.4
+---@version 5.4
 -- /qompassai/hyprland/hypr.d/core/general.conf
 -- Qompass AI Hyprland Core General Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
-
-
 hl.config({
     general = {
         allow_tearing = true,

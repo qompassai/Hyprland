@@ -1,19 +1,14 @@
-#!/usr/bin/env lua
--- mesa.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/graphics/mesa.conf
+#!/usr/bin/env lua5.4
+-- /qompassai/hyprland/hypr/hypr.d/graphics/mesa.lua
 -- Qompass AI Hyprland Mesa Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 -- References: https://docs.mesa3d.org/envvars.html | https://docs.mesa3d.org/egl.html
--- env = EGL_DRIVER                                                      , iris
+-- hl.env(EGL_DRIVER, iris)
 hl.env('EGL_PLATFORM', 'wayland')
 hl.env('GST_VAAPI_ALL_DRIVERS', '1')
 hl.env('LIBGL_ALWAYS_SOFTWARE', '0')
--- env =  LIBVA_DRIVER_NAME                                             , nvidia #leave unset to allow best guess
+-- hl.env(LIBVA_DRIVER_NAME, nvidia) --leave unset to allow best guess
 hl.env('LIBVA_DRIVERS_PATH', '/usr/lib/dri')
 hl.env('LP_NUM_THREADS', '8')
 hl.env('MESA_DISK_CACHE_DATABASE', '1')
@@ -22,7 +17,7 @@ hl.env('MESA_GLSL_CACHE_ENABLE', 'true')
 hl.env('MESA_GLSL_CACHE_DIR', '/home/phaedrus/.cache/mesa_shader_cache')
 hl.env('MESA_GLSL_CACHE_MAX_SIZE', '32G')
 hl.env('MESA_SHADER_CACHE_MAX_SIZE', '32G')
--- env = MESA_LOADER_DRIVER_OVERRIDE                                     , iris
+-- hl.env(MESA_LOADER_DRIVER_OVERRIDE, iris)
 hl.env('MESA_DISK_CACHE_MULTI_FILE', '1')
 hl.env('MESA_NO_ERROR', '1')
 hl.env('MESA_SHADER_CACHE_DIR', '/home/phaedrus/.cache/mesa_shader_cache_db')

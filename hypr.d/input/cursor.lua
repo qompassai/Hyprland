@@ -1,18 +1,12 @@
 #!/usr/bin/env lua
--- cursor.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/input/cursor.conf
+-- /qompassai/hyprland/hypr.d/input/cursor.lua
 -- Qompass AI Hyprland Inpur Cursor Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- Reference: https://wiki.hypr.land/Configuring/Variables/#cursor
-
+---@source: https://wiki.hypr.land/Configuring/Variables/#cursor
 hl.config({
     cursor = {
-        -- FIXME: default_monitor =
+        --  default_monitor =
         enable_hyprcursor = true,
         hide_on_key_press = false,
         hide_on_touch = true,

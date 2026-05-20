@@ -1,11 +1,7 @@
 #!/usr/bin/env lua
 -- decoration.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hpyr/hypr.d/decorations/decoration.conf
--- Qompass AI Hyprland Decoration Config
+-- /qompassai/hyprland/hpyr/hypr.d/decorations/decoration.lua
+-- Qompass AI Hyprland 0.55+ Decoration Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 

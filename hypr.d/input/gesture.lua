@@ -1,15 +1,10 @@
-#!/usr/bin/env lua
--- gesture.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/input/gesture.conf
--- Qompass AI Hyprland Input Gesture Config
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/input/gesture.lua
+-- Qompass AI Hyprland 0.55+ Input Gesture Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- Reference:  https://wiki.hypr.land/Configuring/Gestures/
-
+---@source:  https://wiki.hypr.land/Configuring/Gestures/
 hl.config({
     gesture = {
         gesture = '3, down, close',

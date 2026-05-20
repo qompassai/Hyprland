@@ -1,12 +1,7 @@
 #!/usr/bin/env lua
--- hyprpaper.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
+-- /qompassai/hyprland/hypr/hypr.d/wallpaper/hyprpaper.lua
+-- Qompass AI Hyprland 0.55+ HyprPaper Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/wallpaper/hyprpaper.conf
--- Qompass AI Hyprland HyprPaper Config
--- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 -- preload = /home/phaedrus/.config/hypr/hypr.d/wallpaper/wp/wall0.png
 -- wallpaper = /home/phaedrus/.config/hypr/hypr.d/wallpaper/wp/wall0.png

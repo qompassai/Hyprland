@@ -1,15 +1,10 @@
-#!/usr/bin/env lua
--- sdl.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/dotfiles/.config/hypr/hypr.d/graphics/sdl.lua
+-- Qompass AI Hyprland 0.55+ Simple Direct Media Layer (SDL) Graphics Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/dotfiles/.config/hypr/hypr.d/graphics/sdl.conf
--- Qompass AI Simple Direct Media Layer (SDL) Graphics Config
--- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###########################################################
--- References: https://wiki.hypr.land/Configuring/Environment-variables/#toolkit-backend-variables |
--- https://wiki.libsdl.org/SDL3/EnvironmentVariables | https://github.com/libsdl-org/SDL
+---@source https://wiki.hypr.land/Configuring/Environment-variables/#toolkit-backend-variables | https://wiki.libsdl.org/SDL3/EnvironmentVariables | https://github.com/libsdl-org/SDL
 hl.env('SDL_AUDIO_DRIVER', 'pipewire')
 hl.env('SDL_AUDIO_FREQUENCY', '0')
 hl.env('SDL_DYNAMIC_API_ALL', '1')

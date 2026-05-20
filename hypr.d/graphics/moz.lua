@@ -1,15 +1,11 @@
-#!/usr/bin/env lua
--- moz.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/graphics/moz.conf
--- Qompass AI Hyprland Mozilla Graphics Config
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr/hypr.d/graphics/moz.lua
+-- Qompass AI Hyprland 0.55+ Mozilla Graphics Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
--- ############################################################
+--------------------------------------------------------
 -- References: https://wiki.archlinux.org/title/Firefox#Wayland | https://github.com/openjdk/jdk/blob/master/src/java.desktop/unix/classes/sun/awt/X11/XWM.java
-local bin = '~/.local/bin'
+--local bin = '~/.local/bin'
 hl.env('_JAVA_AWT_WM_NONREPARENTING', '1')
 hl.env('MOZ_DBUS_REMOTE', '1')
 hl.env('MOZ_ENABLE_WAYLAND', '1')

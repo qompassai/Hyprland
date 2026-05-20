@@ -1,14 +1,10 @@
-#!/usr/bin/env lua
--- device.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/input/device.conf
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/input/device.lua
 -- Qompass AI Hyprland Input Device Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- Reference: https://wiki.hypr.land/Configuring/Variables/ Input Section
+---@source: https://wiki.hypr.land/Configuring/Variables/ Input Section
 
 hl.config({
     input = {
