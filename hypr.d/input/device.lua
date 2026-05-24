@@ -5,14 +5,13 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 ---@source: https://wiki.hypr.land/Configuring/Variables/ Input Section
-
 hl.config({
     input = {
         accel_profile = 'adaptive',
         force_no_accel = false,
         kb_layout = 'us',
-        -- FIXME: kb_model =
-        -- FIXME: kb_variant =
+        kb_model = '',
+        kb_variant = '',
         kb_options = 'compose:ralt',
         kb_rules = 'evdev',
         numlock_by_default = false,
@@ -44,13 +43,11 @@ hl.config({
             middle_button_emulation = false,
             natural_scroll = false,
             scroll_factor = 1.0,
-            -- FIXME: tap-and-drag = true
             tap_button_map = 'lrm',
-            -- FIXME: tap-to-click = true
         },
         touchdevice = {
             enabled = true,
-            -- FIXME: output =
+            -- output =
             transform = -1,
         },
         tablet = {
@@ -58,7 +55,7 @@ hl.config({
             active_area_size = '0 0',
             absolute_region_position = false,
             left_handed = false,
-            -- FIXME: output =
+            --output =
             region_position = '0 0',
             region_size = '0 0',
             relative_input = false,
@@ -69,4 +66,23 @@ hl.config({
             share_states = false,
         },
     },
+})
+hl.keyword('input:touchpad:tap-and-drag', 'true')
+hl.keyword('input:touchpad:tap-to-click', 'true')
+hl.device({
+    name = 'at-translated-set-2-keyboard',
+    kb_layout = 'us',
+    kb_options = 'compose:ralt',
+    kb_rules = 'evdev',
+})
+hl.device({
+    name = 'mx-keys-keyboard',
+    kb_layout = 'us',
+    kb_options = 'compose:ralt',
+    kb_rules = 'evdev',
+})
+
+hl.device({
+    name = 'steelseries-steelseries-klc',
+    keybinds = true,
 })

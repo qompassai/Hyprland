@@ -1,15 +1,10 @@
-#!/usr/bin/env lua
--- quirks.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/media/quirks.lua
+-- Qompass AI Hyprland 0.55+ Quirks Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/media/quirks.conf
--- Qompass AI Hyprland Quirks Config
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- ----------------------------------------
--- Reference: https://wiki.hypr.land/Configuring/Variables/#quirks
-
+-- --------------------------------------------------
+---@source https://wiki.hypr.land/Configuring/Variables/#quirks
 hl.config({
     quirks = {
         prefer_hdr = 1,

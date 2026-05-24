@@ -7,11 +7,11 @@
 <div align="center" style="margin-top: 16px;">
 
   <a href="#aquamarine-aqconf">
-    Aquamarine (aq.conf)
+    Aquamarine (aq.conf/aq.lua)
   </a> ·
 
   <a href="#electron-electronconf">
-    Electron (electron.conf)
+    Electron (electron.conf/electron.lua)
   </a> ·
 
   <a href="#google-googleconf">
@@ -135,7 +135,7 @@
         <td>UNREAL_FORCE_WAYLAND</td>
       </tr>
       <tr>
-        <td>vulkan.conf</td>
+        <td>vulkan.conf/vulkan.lua</td>
         <td>Vulkan loader, WSI, and toolkit Vulkan integration</td>
         <td>MESA_VK_WSI_LIST, VK_PRESENT_MODE, VK_WSI_MODE, Qt/SDL Vulkan hints</td>
       </tr>

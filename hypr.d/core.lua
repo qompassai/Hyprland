@@ -4,7 +4,9 @@
 -- Qompass AI Hyprland 0.55+ Core Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
 -- ###################################################
-require('.d.core.env')
-require('.d.core.general')
-require('.d.core.monitors')
-require('.d.core.version')
+local M = {}
+require('hypr.d/core/env')
+require('hypr.d/core/general')
+require('hypr.d/core/monitors')
+require('hypr.d/core/version')
+return M

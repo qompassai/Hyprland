@@ -14,7 +14,7 @@ hl.config({
         follow_mouse_threshold = 0.0,
         force_no_accel = false,
         left_handed = false,
-        -- FIXME: kb_file =
+        --kb_file =
         kb_layout = 'us',
         -- FIXME: kb_model =
         kb_options = 'compose:ralt',

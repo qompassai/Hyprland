@@ -1,16 +1,13 @@
-#!/usr/bin/env lua
--- binds.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/keybinds/binds.conf
--- Qompass AI Hyprland Binds Config
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/keybinds/binds.lua
+-- Qompass AI Hyprland 0.55+ Binds Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 -- References: https://wiki.hypr.land/Configuring/Binds/ | https://wiki.hypr.land/Configuring/Variables/#binds
-local mainMod = 'SUPER'
-hl.bind('ALT + TAB', 'bringactivetotop')
+--local mainMod =
+--  'SUPER'    --hl.bind('ALT + TAB', 'bringactivetotop')
+--[[
 hl.bind('ALT + TAB', 'cyclenext')
 hl.bind('ALT + TAB', 'togglesplit')
 hl.bind('CTRL + SUPER + Backslash', 'resizeactive', 'exact 640 480')
@@ -49,7 +46,7 @@ hl.bind('SUPER ALT + z', 'exec', '$citation')
 hl.bind('SUPER + d', 'exec', '$dis')
 hl.bind('SUPER + e', 'exec', '$emoji')
 hl.bind('SUPER + f', 'togglefloating')
-hl.bind('SUPER + F1', 'exec', [[wtype '🔥']])
+--[[
 hl.bind('SUPER + g', 'exec', '$term')
 hl.bind('SUPER + h', 'exec', '$screenshot')
 hl.bind('SUPER + l', 'exec', '$lock')
@@ -67,10 +64,13 @@ hl.bind('SUPER + z', 'exec', '$pdf')
 -- bindel                                = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 hl.bind('SUPER + mouse:272', 'movewindow', { flags = 'm' })
 hl.bind('SUPER + mouse:273', 'resizewindow', { flags = 'm' })
-hl.bind('SUPER ALT + mouse_down', 'exec', [[hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float * 1.1')]], { flags = 'p' })
-hl.bind('SUPER ALT + mouse_up', 'exec', [[hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '(.float * 0.9) | if . < 1 then 1 else . end')]], { flags = 'p' })
--- FIXME: binds:scroll_event_delay = 10
-
+hl.bind(
+    'SUPER ALT + mouse_down',
+    'exec',
+    [[hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float * 1.1')]]
+--,
+--    { flags = 'p' }
+--[[
 hl.config({
     binds = {
         allow_pin_fullscreen = true,
@@ -89,3 +89,5 @@ hl.config({
         workspace_center_on = 0,
     },
 })
+]]
+--]]

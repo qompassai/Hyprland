@@ -1,7 +1,8 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.4
+---@version 5.4
 -- /qompassai/hyprland/hypr.d/input/cursor.lua
--- Qompass AI Hyprland Inpur Cursor Config
--- Copyright (C) 2025 Qompass AI, All rights reserved
+-- Qompass AI Hyprland 0.55+ Input Cursor Config
+-- Copyright (C) 2026 Qompass AI, All rights reserved
 -- ###################################################
 ---@source: https://wiki.hypr.land/Configuring/Variables/#cursor
 hl.config({

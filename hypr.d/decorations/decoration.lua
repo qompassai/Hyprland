@@ -1,10 +1,10 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.4
+---@version 5.4
 -- decoration.lua
 -- /qompassai/hyprland/hpyr/hypr.d/decorations/decoration.lua
 -- Qompass AI Hyprland 0.55+ Decoration Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
-
 hl.config({
     decoration = {
         active_opacity = 1.0,
@@ -18,7 +18,7 @@ hl.config({
         inactive_opacity = 0.15,
         rounding = 20,
         rounding_power = 2.0,
-        -- FIXME: screen_shader =
+        -- screen_shader =
         blur = {
             brightness = 1.0,
             contrast = 1.0,
@@ -39,7 +39,6 @@ hl.config({
         },
         shadow = {
             color = '0xee1a1a1a',
-            -- color_inactive                                =
             enabled = true,
             ignore_window = true,
             offset = '0 2',

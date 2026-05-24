@@ -1,11 +1,7 @@
-#!/usr/bin/env lua
--- dwindle.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/layouts/dwindle.conf
--- Qompass AI Layout Dwindle Config
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/layouts/dwindle.lua
+-- Qompass AI Hyprland 0.55+ Layout Dwindle Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 
@@ -15,7 +11,6 @@ hl.config({
         force_split = 2,
         permanent_direction_override = false,
         precise_mouse_move = false,
-        preserve_split = true,
         preserve_split = true,
         pseudotile = true,
         single_window_aspect_ratio = '0 0',

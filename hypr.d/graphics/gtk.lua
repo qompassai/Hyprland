@@ -11,22 +11,22 @@ hl.env('GDK_PIXBUF_MODULE_FILE', '/usr/lib/gdk-pixbuf-2.0/2.10.0/loaders.cache')
 hl.env('GDK_RENDERING', 'similar')
 hl.env('GDK_SCALE', '1')
 hl.env('GLFW_IM_MODULE', 'fcitx5')
--- hl.env(GDK_WAYLAND_DISABLE, primary-selection,xdg-output) ---GTK3/4
+--hl.env('GDK_WAYLAND_DISABLE', 'primary-selection', 'xdg-output') ---GTK3/4
 hl.env('GSK_CACHE_TIMEOUT', '15')
--- hl.env(GSK_GPU_DISABLE                                          , blit,clear,merge,gradients,mipmap,to-image,occlusion,repeat | all  #GTK4
+-- hl.env(GSK_GPU_DISABLE, blit,clear,merge,gradients,mipmap,to-image,occlusion,repeat | all  #GTK4
 hl.env('GSK_RENDERER', 'vulkan')
--- hl.env(GTK3_MODULES, ) ---GTK3
+-- hl.env('GTK3_MODULES', ) ---GTK3
 hl.env('GTK_APPLICATION_PREFERS_NON_DEFAULT_THEME', '0')
 hl.env('GTK_CSD', '1')
--- env = GTK_DATA_PREFIX                                          , unset #GTK2/3/4
--- env = GTK_EXE_PREFIX                                           , unset #GTK2/3/4
+-- hl.env('GTK_DATA_PREFIX', ) unset #GTK2/3/4
+-- hl.env ('GTK_EXE_PREFIX', ) --unset #GTK2/3/4
 hl.env('GTK_IM_MODULE', 'fcitx5')
--- env = GTK_INSPECTOR_DISPLAY                                   , :0 #GTK4
--- env = GTK_INSPECTOR_RENDERER                                   , gl #GTK4
+-- hl.env('GTK_INSPECTOR_DISPLAY', :0 #GTK4
+ hl.env('GTK_INSPECTOR_RENDERER', 'gl') --GTK4
 hl.env('GTK_MEDIA', 'gstreamer')
 -- env = GTK_MODULES                                              , colorreload #GTK2/3~4
--- env = GTK_OVERLAY_SCROLLING                                    , 1  #GTK3
--- env = GTK_OVERRIDE_RESTORE_REASON                              , launch,pristine,recover,restore #GTK3/4
+-- hl.env('GTK_OVERLAY_SCROLLING', 1)  ---GTK3
+-- hl.env('GTK_OVERRIDE_RESTORE_REASON' , launch,pristine,recover,restore) #GTK3/4
 -- env = GTK_PATH                                                 , unset #GTK2/3/4
 hl.env('GTK_THEME', 'Adwaita:dark')
 hl.env('GTK_USE_PORTAL', '1')

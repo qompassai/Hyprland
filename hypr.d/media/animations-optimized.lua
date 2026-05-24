@@ -1,14 +1,9 @@
 #!/usr/bin/env lua
--- animations-optimized.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/media/animations-optimized.conf
--- Qompass AI Optimized Animations Config
+-- /qompassai/hyprland/hypr.d/media/animations-optimized.lua
+-- Qompass AI Hyprland 0.55+ Optimized Animations Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
-
+--[[
 hl.config({
     animations = {
         animation = 'border, 1, 1.6, liner',
@@ -45,3 +40,4 @@ hl.config({
         enabled = true,
     },
 })
+--]]

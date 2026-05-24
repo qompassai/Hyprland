@@ -1,11 +1,6 @@
 #!/usr/bin/env lua
--- ecosystem.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/media/ecosystem.conf
--- Qompass AI Hyprland Media Ecosystem Config
+-- /qompassai/hyprland/hypr/hypr.d/media/ecosystem.lua
+-- Qompass AI Hyprland 0.55+ Media Ecosystem Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ####################################################
 -- https://wiki.hypr.land/Configuring/Permissions/#permissions

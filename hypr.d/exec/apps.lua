@@ -5,8 +5,8 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 local M = {}
-M.app_drawer =
-    [[hyprlauncher --dmenu < <(find ~/.local/share/applications /usr/share/applications -name '*.desktop' | xargs grep -l Name= | xargs)]]
+M.app_drawer = 'hyprlauncher'
+M.bar = 'waybar'
 M.blue = 'termshark'
 M.blue2 = 'wireshark'
 M.bt = 'bluetui'
@@ -25,6 +25,7 @@ M.entry_color = 'rgba(FFDAD6FF)'
 M.font_family = 'DaddyTimeMono Nerd Font Mono'
 M.font_family_clock = 'DaddyTimeMono Nerd Font Mono'
 M.font_material_symbols = 'Material Symbols Rounded'
+M.hyprpaper = 'hyprpaper'
 M.launcher = 'hyprlauncher'
 M.lock = 'hyprlock'
 M.logout = 'hyprctl dispatch exit'
@@ -32,6 +33,7 @@ M.files = 'dolphin'
 M.menu = 'fuzzel --dmenu'
 M.tele = 'ithil'
 M.tele2 = 'Telegram'
+M.term = 'foot'
 M.music = 'ncspot'
 M.network = 'nmtui'
 M.notify = 'makoctl'
@@ -61,5 +63,4 @@ M.weather = 'wttr.in'
 M.web = 'firefox'
 M.web2 = 'google-chrome-canary'
 M.window_switcher = 'bemenu-run --window-mode'
-
 return M

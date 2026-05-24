@@ -5,6 +5,80 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 ---@source https://wiki.hypr.land/Configuring/Window-Rules/#layer-rules
+--[[
+---@param ns string
+---@param props table<string, boolean|string|number>
+local function lr(ns, props)
+    ---@type table<string, any>       -- tells lua_ls this is a open-ended table
+    local rule = { match = { namespace = ns } }
+    for k, v in pairs(props) do
+        rule[k] = v
+    end
+    hl.layer_rule(rule)
+end
+
+---@param namespaces string[]
+---@param props table<string, boolean|string|number>
+local function lr_many(namespaces, props)
+    for _, ns in ipairs(namespaces) do
+        lr(ns, props)
+    end
+end
+--]]
+hl.layer_rule({
+    match = {
+        namespace = '.*',
+    },
+    xray = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'anyrun',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'hyprpicker',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'indicator.*',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'noanim',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'osk',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'overview',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'selection',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'gtk4-layer-shell',
+    },
+    no_anim = true,
+})
 layerrule = 'animation fade,               match:namespace         hyprpaper'
 layerrule = 'animation fade,               match:namespace         notifications'
 layerrule = 'animation fade,               match:namespace         selection'
@@ -107,3 +181,221 @@ layerrule = 'no_anim on,                   match:namespace         osk'
 layerrule = 'no_anim on,                   match:namespace         overview'
 layerrule = 'no_anim on,                   match:namespace         selection'
 layerrule = 'xray 1,                       match:namespace         .                      *'
+
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarRight',
+    },
+    animation = 'slide right',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarLeft',
+    },
+    animation = 'slide left',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:verticalBar',
+    },
+    animation = 'slide',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wallpaperSelector',
+    },
+    animation = 'slide top',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wNotificationCenter',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wOnScreenDisplay',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wStartMenu',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    ignore_alpha = 0,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    no_anim = true,
+})
+
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarRight',
+    },
+    animation = 'slide right',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarLeft',
+    },
+    animation = 'slide left',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:verticalBar',
+    },
+    animation = 'slide',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wallpaperSelector',
+    },
+    animation = 'slide top',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wNotificationCenter',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wOnScreenDisplay',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wStartMenu',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    ignore_alpha = 0,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    no_anim = true,
+})
+
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarRight',
+    },
+    animation = 'slide right',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarLeft',
+    },
+    animation = 'slide left',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:verticalBar',
+    },
+    animation = 'slide',
+})
+hl.layer_rule({
+    match = { namespace = 'quickshell:wallpaperSelector' },
+    animation = 'slide top',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wNotificationCenter',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wOnScreenDisplay',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wStartMenu',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    ignore_alpha = 0,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    no_anim = true,
+})
+
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarRight',
+    },
+    animation = 'slide right',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:sidebarLeft',
+    },
+    animation = 'slide left',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:verticalBar',
+    },
+    animation = 'slide',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wallpaperSelector',
+    },
+    animation = 'slide top',
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wNotificationCenter',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wOnScreenDisplay',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wStartMenu',
+    },
+    no_anim = true,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    ignore_alpha = 0,
+})
+hl.layer_rule({
+    match = {
+        namespace = 'quickshell:wTaskView',
+    },
+    no_anim = true,
+})

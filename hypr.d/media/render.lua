@@ -1,15 +1,9 @@
-#!/usr/bin/env lua
--- render.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/media/render.conf
--- Qompass AI Hyprland Media Render Config
+#!/usr/bin/env lua5.4
+-- /qompassai/hyprland/hypr/hypr.d/media/render.lua
+-- Qompass AI Hyprland 0.55+ Media Render Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- Reference https://wiki.hypr.land/Configuring/Variables/#render
-
+---@source https://wiki.hypr.land/Configuring/Variables/#render
 hl.config({
     render = {
         cm_auto_hdr = 1,

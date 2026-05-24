@@ -1,13 +1,9 @@
-#!/usr/bin/env lua
--- rules.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/rules.conf
--- Qompass AI Hyprland Rules Config
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/rules.lua
+-- Qompass AI Hyprland 0.55+ Rules Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
-require(".d.rules.layer_rules")  -- was: source = ~/.config/hypr/hypr.d/rules/layer_rules.conf
-require(".d.rules.window_rules")  -- was: source = ~/.config/hypr/hypr.d/rules/window_rules.conf
-require(".d.rules.workspaces_rules")  -- was: source = ~/.config/hypr/hypr.d/rules/workspaces_rules.conf
+require('hypr.d/rules/layer_rules')
+require('hypr.d/rules/window_rules')
+require('hypr.d/rules/workspaces_rules')

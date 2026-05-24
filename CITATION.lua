@@ -1,0 +1,28 @@
+#!/usr/bin/env lua
+-- CITATION.lua
+-- Qompass AI Hyprland Config (auto-converted by h2l)
+-- Copyright (C) 2026 Qompass AI, All rights reserved
+-- NOTE: Review FIXME comments before use
+
+-- FIXME: cff-version: 1.2.0
+-- FIXME: title: "Hyprland"
+-- FIXME: message: "If you use this software, please cite it as below."
+-- FIXME: authors:
+-- FIXME: - family-names: "Porter"
+-- FIXME: given-names: "Matthew A."
+-- FIXME: orcid: "https://orcid.org/0000-0002-0302-4812"
+-- FIXME: affiliation: "Qompass AI"
+-- FIXME: version: "v2026-05-03"
+-- FIXME: date-released: "2026-05-03"
+-- FIXME: repository-code: "https://github.com/qompassai/Hyprland"
+-- FIXME: license: "Q-CDA-1.0"
+-- FIXME: keywords:
+-- FIXME: - AI
+-- FIXME: - Education
+-- FIXME: - Healthcare
+-- FIXME: - Post-Quantum Cryptography
+-- FIXME: - Quantum
+-- FIXME: - config
+-- FIXME: - lua
+-- FIXME: - neovim
+-- FIXME: abstract: "Qompass AI Hyprland Setup"

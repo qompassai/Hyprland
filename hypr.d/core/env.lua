@@ -3,11 +3,22 @@
 -- Qompass AI Hyprland 0.55+ Core Environment Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
+local home_dir = os.getenv('HOME')
+local xdg_data_dirs_old = os.getenv('XDG_DATA_DIRS') or ''
+hl.env(
+    'XDG_DATA_DIRS',
+    home_dir
+        .. '/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:'
+        .. xdg_data_dirs_old
+)
 hl.env('XDG_CACHE_HOME', '/home/phaedrus/.cache')
 hl.env('XDG_CONFIG_HOME', '/home/phaedrus/.config')
 hl.env('XDG_CURRENT_DESKTOP', 'Hyprland')
 hl.env('XDG_DATA_HOME', '/home/phaedrus/.local/share')
-hl.env('XDG_DATA_DIRS', '/home/phaedrus/.local/share:/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:/home/phaedrus/.local/share/flatpak/exports/share')
+hl.env(
+    'XDG_DATA_DIRS',
+    '/home/phaedrus/.local/share:/usr/local/share:/usr/share:/var/lib/flatpak/exports/share:/home/phaedrus/.local/share/flatpak/exports/share'
+)
 hl.env('XDG_DESKTOP_DIR', '/home/phaedrus/.Desktop')
 -- env = XDG_DESKTOP_PORTAL_DIR,/usr/share/xdg-desktop-portal/portals
 hl.env('XDG_DOCUMENTS_DIR', '/home/phaedrus/.Documents')

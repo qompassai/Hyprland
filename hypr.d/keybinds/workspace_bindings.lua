@@ -1,14 +1,11 @@
-#!/usr/bin/env lua
--- workspace_bindings.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/keybinds/workspace_bindings.conf
--- Qompass AI Workspace Keybindings Config
+#!/usr/bin/env lua5,4
+---@version 5.4
+-- /qompassai/hyprland/hypr/hypr.d/keybinds/workspace_bindings.lua
+-- Qompass AI Hyprland 0.55+ Workspace Keybindings Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 local mainMod = 'SUPER'
+--[[
 hl.bind('CTRL SUPER + Left', 'workspace', 'r-1')
 hl.bind('CTRL SUPER + mouse_down', 'workspace', 'r-1')
 hl.bind('CTRL SUPER + mouse_up', 'workspace', 'r+1')
@@ -50,3 +47,4 @@ hl.bind('SUPER + TAB', 'togglespecialworkspace')
 hl.bind('SUPER + mouse:275', 'togglespecialworkspace')
 hl.bind('SUPER SHIFT + mouse_down', 'movetoworkspace', 'r-1')
 hl.bind('SUPER SHIFT + mouse_up', 'movetoworkspace', 'r+1')
+--]]

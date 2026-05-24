@@ -5,4 +5,8 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 ---@source https://wiki.hypr.land/Configuring/Variables/#decoration
-require('.d.decorations.decoration')
+local M = {}
+require('hypr.d/decorations/decoration')
+--hl.keyword('decoration:screen_shader', os.getenv('HOME') .. '/.config/hypr/hypr.d/decorations/shaders/extradark.frag')
+
+return M

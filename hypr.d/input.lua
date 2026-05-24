@@ -4,7 +4,7 @@
 -- Qompass AI Hyprland 0.55+ Input Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
 -- ###################################################
-require('.d.input.cursor')
-require('.d.input.input')
-require('.d.input.inputenv')
-require('.d.input.gesture')
+require('hypr.d/input/cursor')
+require('hypr.d/input/input')
+require('hypr.d/input/inputenv')
+--require('hypr.d/input/gesture')
