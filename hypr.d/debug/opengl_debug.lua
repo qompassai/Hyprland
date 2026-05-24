@@ -1,14 +1,9 @@
-#!/usr/bin/env lua
--- opengl_debug.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/debug/opengl_debug.conf
--- Qompass AI Hypland OpenGL Debug Config
+#!/usr/bin/env lua5.4
+-- /qompassai/hyprland/hypr/hypr.d/debug/opengl_debug.lua
+-- Qompass AI Hypland 0.55+ OpenGL Debug Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- Reference | https://chromium.googlesource.com/angle/angle/+/6430e5e0035bf43695662784b9a2aec726f25cd7/doc/CaptureAndReplay.md
+---@source | https://chromium.googlesource.com/angle/angle/+/6430e5e0035bf43695662784b9a2aec726f25cd7/doc/CaptureAndReplay.md
 hl.env('ANGLE_BACKEND_INFO', '1')
 hl.env('ANGLE_GL_VENDOR', 'Intel')
 hl.env('ANGLE_GL_VERSION', '4.6 (Vulkan 1.4.321.1)')

@@ -1,11 +1,6 @@
-#!/usr/bin/env lua
--- hypr_debug.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr.d/debug/hypr_debug.conf
--- Qompass AI Hyprland Hypr Debug Config
+#!/usr/bin/env lua5.4
+-- /qompassai/hyprland/hypr.d/debug/hypr_debug.lua
+-- Qompass AI Hyprland 0.55+ Hypr Debug Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 hl.env('AQ_TRACE', '1')
