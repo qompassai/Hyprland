@@ -4,73 +4,206 @@
 -- Qompass AI Hyprland 0.55+ Binds Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- References: https://wiki.hypr.land/Configuring/Binds/ | https://wiki.hypr.land/Configuring/Variables/#binds
---local mainMod =
---  'SUPER'    --hl.bind('ALT + TAB', 'bringactivetotop')
---[[
-hl.bind('ALT + TAB', 'cyclenext')
-hl.bind('ALT + TAB', 'togglesplit')
-hl.bind('CTRL + SUPER + Backslash', 'resizeactive', 'exact 640 480')
-hl.bind('CTRL + SUPER + Left', 'workspace', 'r-1')
-hl.bind('CTRL + SUPER + mouse_down', 'workspace', 'r-1')
-hl.bind('CTRL + SUPER + mouse_up', 'workspace', 'r+1')
-hl.bind('CTRL + SUPER + Page_Down', 'workspace', 'r+1')
-hl.bind('CTRL + SUPER + Page_Up', 'workspace', 'r-1')
-hl.bind('CTRL + SUPER + Right', 'workspace', 'r+1')
-hl.bind('CTRL + SUPER + mouse_up', 'workspace', 'r+1')
-hl.bind('CTRL + SUPER + mouse_down', 'workspace', 'r-1')
-hl.bind('CTRL + SUPER + Right', 'workspace', 'r+1')
-hl.bind('CTRL + SUPER + Left', 'workspace', 'r-1')
-hl.bind('CTRL SUPER ALT + Left', 'workspace', 'm-1')
-hl.bind('CTRL SUPER ALT + Right', 'workspace', 'm+1')
-hl.bind('CTRL SUPER ALT + Right', 'workspace', 'm+1')
-hl.bind('CTRL SUPER ALT + Left', 'workspace', 'm-1')
-hl.bind('CTRL SUPER SHIFT + Up', 'movetoworkspacesilent', 'special')
-hl.bind('CTRL SUPER SHIFT + Right', 'movetoworkspace', 'r+1')
-hl.bind('CTRL SUPER SHIFT + Left', 'movetoworkspace', 'r-1')
-hl.bind('CTRL SUPER + [', 'workspace', '-1')
-hl.bind('CTRL SUPER + ]', 'workspace', '+1')
-hl.bind('CTRL SUPER + Up', 'workspace', 'r-5')
-hl.bind('CTRL SUPER + Down', 'workspace', 'r+5')
-hl.bind('SUPER + a', 'exec', '$term $tele')
-hl.bind('SUPER ALT + a', 'exec', '$tele2')
-hl.bind('SUPER ALT + d', 'exec', '$dis2')
-hl.bind('SUPER ALT + f', 'exec', '$files')
-hl.bind('SUPER ALT + g', 'exec', '$term2')
-hl.bind('SUPER ALT + r', 'exec', '$record2')
-hl.bind('SUPER ALT + s', 'exec', '$vol_ctrl2')
-hl.bind('SUPER ALT + t', 'exec', '$bt2')
-hl.bind('SUPER ALT + v', 'exec', '$voice toggle')
-hl.bind('SUPER ALT + w', 'exec', '$web2')
-hl.bind('SUPER ALT + z', 'exec', '$citation')
-hl.bind('SUPER + d', 'exec', '$dis')
-hl.bind('SUPER + e', 'exec', '$emoji')
-hl.bind('SUPER + f', 'togglefloating')
---[[
-hl.bind('SUPER + g', 'exec', '$term')
-hl.bind('SUPER + h', 'exec', '$screenshot')
-hl.bind('SUPER + l', 'exec', '$lock')
-hl.bind('SUPER + m', 'exec', 'hyprmon --profile home')
-hl.bind('SUPER + r', 'exec', '$record')
-hl.bind('SUPER + s', 'exec', '$term $vol_ctrl')
-hl.bind('SUPER SHIFT + c', 'exec', 'cliphist list | hyprlauncher | cliphist decode | wl-copy')
-hl.bind('SUPER + SPACE', 'exec', '$launcher')
-hl.bind('SUPER + t', 'exec', '$bt2')
-hl.bind('SUPER + w', 'exec', '$web')
-hl.bind('SUPER + x', 'killactive')
-hl.bind('SUPER + z', 'exec', '$pdf')
--- bindel                                = , XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+
--- bindel                                = , XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-
--- bindel                                = , XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-hl.bind('SUPER + mouse:272', 'movewindow', { flags = 'm' })
-hl.bind('SUPER + mouse:273', 'resizewindow', { flags = 'm' })
+---@source : https://wiki.hypr.land/Configuring/Binds/ | https://wiki.hypr.land/Configuring/Variables/#binds
+local apps = require('hypr.d.exec.apps')
+local mainMod = 'SUPER'
+hl.bind(mainMod .. ' + A', hl.dsp.exec_cmd(apps.term .. ' ' .. apps.tele))
+hl.bind(mainMod .. ' + ALT + A', hl.dsp.exec_cmd(apps.tele2))
+hl.bind(mainMod .. ' + ALT + D', hl.dsp.exec_cmd(apps.dis2))
+hl.bind(mainMod .. ' + ALT + F', hl.dsp.exec_cmd(apps.files))
+hl.bind(mainMod .. ' + ALT + G', hl.dsp.exec_cmd(apps.term2))
+hl.bind(mainMod .. ' + ALT + R', hl.dsp.exec_cmd(apps.record2))
+hl.bind(mainMod .. ' + ALT + S', hl.dsp.exec_cmd(apps.vol_ctrl2))
+hl.bind(mainMod .. ' + ALT + T', hl.dsp.exec_cmd(apps.bt2))
+hl.bind(mainMod .. ' + ALT + V', hl.dsp.exec_cmd(apps.voice .. ' toggle'))
+hl.bind(mainMod .. ' + ALT + W', hl.dsp.exec_cmd(apps.web2))
+hl.bind(mainMod .. ' + ALT + Z', hl.dsp.exec_cmd(apps.cite))
+hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(apps.dis))
+hl.bind(mainMod .. ' + E', hl.dsp.exec_cmd(apps.emoji))
+hl.bind(mainMod .. ' + G', hl.dsp.exec_cmd(apps.term))
+hl.bind(mainMod .. ' + H', hl.dsp.exec_cmd(apps.screenshot))
+hl.bind(mainMod .. ' + L', hl.dsp.exec_cmd(apps.lock))
+hl.bind(mainMod .. ' + M', hl.dsp.exec_cmd('hyprmon --profile home'))
+hl.bind(mainMod .. ' + R', hl.dsp.exec_cmd(apps.record))
+hl.bind(mainMod .. ' + S', hl.dsp.exec_cmd(apps.term .. ' ' .. apps.vol_ctrl))
+hl.bind(mainMod .. ' + ALT + S', hl.dsp.exec_cmd(apps.vol_ctrl2))
+hl.bind(mainMod .. ' + ALT + T', hl.dsp.exec_cmd(apps.bt2))
+hl.bind(mainMod .. ' + ALT + V', hl.dsp.exec_cmd(apps.voice .. ' toggle'))
+hl.bind(mainMod .. ' + ALT + W', hl.dsp.exec_cmd(apps.web2))
+hl.bind(mainMod .. ' + ALT + Z', hl.dsp.exec_cmd(apps.cite))
+hl.bind(mainMod .. ' + D', hl.dsp.exec_cmd(apps.dis))
+hl.bind(mainMod .. ' + E', hl.dsp.exec_cmd(apps.emoji))
+hl.bind(mainMod .. ' + G', hl.dsp.exec_cmd(apps.term))
+hl.bind(mainMod .. ' + H', hl.dsp.exec_cmd(apps.screenshot))
+hl.bind(mainMod .. ' + L', hl.dsp.exec_cmd(apps.lock))
+hl.bind(mainMod .. ' + M', hl.dsp.exec_cmd('hyprmon --profile home'))
+hl.bind(mainMod .. ' + R', hl.dsp.exec_cmd(apps.record))
+hl.bind(mainMod .. ' + S', hl.dsp.exec_cmd(apps.term .. ' ' .. apps.vol_ctrl))
+hl.bind(mainMod .. ' + SPACE', hl.dsp.exec_cmd(apps.launcher))
+hl.bind(mainMod .. ' + T', hl.dsp.exec_cmd(apps.bt2))
+hl.bind(mainMod .. ' + W', hl.dsp.exec_cmd(apps.web))
+hl.bind(mainMod .. ' + Z', hl.dsp.exec_cmd(apps.pdf))
 hl.bind(
-    'SUPER ALT + mouse_down',
-    'exec',
-    [[hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float * 1.1')]]
---,
---    { flags = 'p' }
---[[
+    mainMod .. ' + SHIFT + C',
+    hl.dsp.exec_cmd('cliphist list | ' .. apps.launcher .. ' | cliphist decode | wl-copy')
+)
+hl.bind(mainMod .. ' + N', hl.dsp.exec_cmd(apps.notify_default))
+hl.bind(mainMod .. ' + SHIFT + N', hl.dsp.exec_cmd(apps.notify_action_menu))
+hl.bind(
+    mainMod .. ' + F',
+    hl.dsp.window.float({
+        action = 'toggle',
+    })
+)
+hl.bind(mainMod .. ' + X', hl.dsp.window.close())
+hl.bind(mainMod .. ' + J', hl.dsp.layout('togglesplit'))
+hl.bind(
+    'ALT + TAB',
+    hl.dsp.focus({
+        next = true,
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Backslash',
+    hl.dsp.window.resize({
+        exact = {
+            w = 640,
+            h = 480,
+        },
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Right',
+    hl.dsp.focus({
+        workspace = 'r+1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Left',
+    hl.dsp.focus({
+        workspace = 'r-1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + mouse_up',
+    hl.dsp.focus({
+        workspace = 'r+1',
+    }),
+    { mouse = true }
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + mouse_down',
+    hl.dsp.focus({
+        workspace = 'r-1',
+    }),
+    { mouse = true }
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Page_Down',
+    hl.dsp.focus({
+        workspace = 'r+1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Page_Up',
+    hl.dsp.focus({
+        workspace = 'r-1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Up',
+    hl.dsp.focus({
+        workspace = 'r-5',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + Down',
+    hl.dsp.focus({
+        workspace = 'r+5',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + [',
+    hl.dsp.focus({
+        workspace = 'e-1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + ]',
+    hl.dsp.focus({
+        workspace = 'e+1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + ALT + Right',
+    hl.dsp.focus({
+        workspace = 'm+1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + ALT + Left',
+    hl.dsp.focus({
+        workspace = 'm-1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + SHIFT + Right',
+    hl.dsp.window.move({
+        workspace = 'r+1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + SHIFT + Left',
+    hl.dsp.window.move({
+        workspace = 'r-1',
+    })
+)
+hl.bind(
+    'CTRL + ' .. mainMod .. ' + SHIFT + Up',
+    hl.dsp.window.move({
+        workspace = 'special',
+        silent = true,
+    })
+)
+hl.bind(mainMod .. ' + mouse:272', hl.dsp.window.drag(), {
+    mouse = true,
+})
+hl.bind(mainMod .. ' + mouse:273', hl.dsp.window.resize(), {
+    mouse = true,
+})
+hl.bind(
+    mainMod .. ' + ALT + mouse_down',
+    hl.dsp.exec_cmd(
+        [[hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float * 1.1')]]
+    ),
+    {
+        mouse = true,
+    }
+)
+hl.bind(
+    mainMod .. ' + ALT + mouse_up',
+    hl.dsp.exec_cmd(
+        [[hyprctl -q keyword cursor:zoom_factor $(hyprctl getoption cursor:zoom_factor -j | jq '.float / 1.1')]]
+    ),
+    {
+        mouse = true,
+    }
+)
+hl.bind('XF86AudioRaiseVolume', hl.dsp.exec_cmd(apps.volume_up), {
+    locked = true,
+    repeating = true,
+})
+hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd(apps.vol_down), {
+    locked = true,
+    repeating = true,
+})
+hl.bind('XF86AudioMute', hl.dsp.exec_cmd(apps.vol_mute), {
+    locked = true,
+    repeating = true,
+})
+hl.bind('PRINT', hl.dsp.exec_cmd('hyprshot -m output'))
+hl.bind(mainMod .. ' + PRINT', hl.dsp.exec_cmd('hyprshot -m window'))
+hl.bind(mainMod .. ' + SHIFT + PRINT', hl.dsp.exec_cmd(apps.screenshot))
 hl.config({
     binds = {
         allow_pin_fullscreen = true,
@@ -89,5 +222,3 @@ hl.config({
         workspace_center_on = 0,
     },
 })
-]]
---]]

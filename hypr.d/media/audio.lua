@@ -1,11 +1,6 @@
-#!/usr/bin/env lua
--- audio.lua
--- Qompass AI Hyprland Config (auto-converted by h2l)
--- Copyright (C) 2026 Qompass AI, All rights reserved
--- NOTE: Review FIXME comments before use
-
--- /qompassai/hyprland/hypr/hypr.d/media/audio.conf
--- Qompass AI Hyprland Media Audio Config
+#!/usr/bin/env lua5.4
+-- /qompassai/hyprland/hypr/hypr.d/media/audio.lua
+-- Qompass AI Hyprland 0.55+ Media Audio Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 hl.env('PIPEWIRE_ALLOWED_RATES', '44100,48000,88200,96000,176400,192000')
@@ -32,3 +27,4 @@ hl.env('PIPEWIRE_RT_PRIO', '88')
 hl.env('PIPEWIRE_STREAM_PROPS', 'audio.format, F32LE')
 hl.env('PULSE_LATENCY_MSEC', '2')
 hl.env('SDL_AUDIODRIVER', 'pulse')
+hl.env('SDL_AUDIO_FREQUENCY', '0')

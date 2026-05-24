@@ -5,397 +5,173 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
 ---@source https://wiki.hypr.land/Configuring/Window-Rules/#layer-rules
---[[
----@param ns string
----@param props table<string, boolean|string|number>
-local function lr(ns, props)
-    ---@type table<string, any>       -- tells lua_ls this is a open-ended table
-    local rule = { match = { namespace = ns } }
-    for k, v in pairs(props) do
-        rule[k] = v
-    end
-    hl.layer_rule(rule)
-end
-
----@param namespaces string[]
----@param props table<string, boolean|string|number>
-local function lr_many(namespaces, props)
-    for _, ns in ipairs(namespaces) do
-        lr(ns, props)
-    end
-end
---]]
-hl.layer_rule({
-    match = {
-        namespace = '.*',
-    },
+local lib = require('hypr.d/lib/init')
+local lr = lib.lr
+local lr_many = lib.lr_many
+lr('.*', {
     xray = true,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'anyrun',
-    },
+lr_many({
+    'anyrun',
+    'gtk4-layer-shell',
+    'hyprpicker',
+    'noanim',
+    'osk',
+    'overview',
+}, {
     no_anim = true,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'hyprpicker',
-    },
-    no_anim = true,
+lr_many({
+    'app-launcher',
+    'bar',
+    'media',
+    'osd',
+    'progress',
+    'quick-launcher',
+    'right-panel',
+    'settings',
+    'user-panel',
+}, {
+    blur = true,
+    ignore_alpha = 0.97,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'indicator.*',
-    },
-    no_anim = true,
+lr_many({
+    'bar[0-9]*',
+    'barcorner.*',
+    'cheatsheet[0-9]*',
+    'dock[0-9]*',
+    'osk[0-9]*',
+    'overview[0-9]*',
+    'sideleft[0-9]*',
+    'sideright[0-9]*',
+}, {
+    blur = true,
+    ignore_alpha = 0.6,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'noanim',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'osk',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'overview',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'selection',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'gtk4-layer-shell',
-    },
-    no_anim = true,
-})
-layerrule = 'animation fade,               match:namespace         hyprpaper'
-layerrule = 'animation fade,               match:namespace         notifications'
-layerrule = 'animation fade,               match:namespace         selection'
-layerrule = 'animation fade,               match:namespace         user-panel:w'
-layerrule = 'animation fade,               match:namespace         wallpaper-switcher'
-layerrule = 'animation slide left,         match:namespace         sideleft.           *'
-layerrule = 'animation slide right,        match:namespace         sideright.          *'
-layerrule = 'animation slide top,          match:namespace         waybar'
-layerrule = 'animation slide up,           match:namespace         nwg-dock'
-layerrule = 'blur on,                      match:namespace         app-launcher'
-layerrule = 'blur on,                      match:namespace         bar'
-layerrule = 'blur on,                      match:namespace         bar                 [0-9]       *'
-layerrule = 'blur on,                      match:namespace         barcorner.          *'
-layerrule = 'blur on,                      match:namespace         cheatsheet          [0-9]       *'
-layerrule = 'blur on,                      match:namespace         dock                [0-9]       *'
-layerrule = 'blur on,                      match:namespace         gtk-layer-shell'
-layerrule = 'blur on,                      match:namespace         indicator.          *'
-layerrule = 'blur on,                      match:namespace         launcher'
-layerrule = 'blur on,                      match:namespace         logout_dialog'
-layerrule = 'blur on,                      match:namespace         media'
-layerrule = 'blur on,                      match:namespace         notifications'
-layerrule = 'blur on,                      match:namespace         nwg-dock'
-layerrule = 'blur on,                      match:namespace         nwg-drawer'
-layerrule = 'blur on,                      match:namespace         osd'
-layerrule = 'blur on,                      match:namespace         osk                  [0-9]       *'
-layerrule = 'blur on,                      match:namespace         overview             [0-9]       *'
-layerrule = 'blur on,                      match:namespace         progress'
-layerrule = 'blur on,                      match:namespace         right-panel'
-layerrule = 'blur on,                      match:namespace         quick-launcher'
-layerrule = 'blur on,                      match:namespace         session              [0-9]       *'
-layerrule = 'blur on,                      match:namespace         settings'
-layerrule = 'blur on,                      match:namespace         sideright            [0-9]       *'
-layerrule = 'blur on,                      match:namespace         sideleft             [0-9]       *'
-layerrule = 'blur on,                      match:namespace         user-panel'
-layerrule = 'blur on,                      match:namespace         wallpaper-switcher'
-layerrule = 'blur on,                      match:namespace         waybar'
-layerrule = 'ignore_alpha 0.97,            match:namespace         app-launcher'
-layerrule = 'ignore_alpha 0.97,            match:namespace         bar'
-layerrule = 'ignore_alpha 0.6,             match:namespace         bar                   [0-9]           *'
-layerrule = 'ignore_alpha 0.6,             match:namespace         barcorner.            *'
-layerrule = 'ignore_alpha 0.6,             match:namespace         cheatsheet            [0-9]           *'
-layerrule = 'ignore_alpha 0.6,             match:namespace         dock                  [0-9]           *'
-layerrule = 'ignore_alpha 0.6,             match:namespace         indicator.            *'
-layerrule = 'ignore_alpha 0.5,             match:namespace         launcher'
-layerrule = 'ignore_alpha 0.97,            match:namespace         media'
-layerrule = 'ignore_alpha 0.7,             match:namespace         notifications'
-layerrule = 'ignore_alpha 0.97,            match:namespace         notifications'
-layerrule = 'ignore_alpha 0.97,            match:namespace         osd'
-layerrule = 'ignore_alpha 0.6,             match:namespace         osk                   [0-9]           *'
-layerrule = 'ignore_alpha 0.6,             match:namespace         overview              [0-9]           *'
-layerrule = 'ignore_alpha 0.97,            match:namespace         right-panel'
-layerrule = 'ignore_alpha 0.6,             match:namespace         sideright             [0-9]           *'
-layerrule = 'ignore_alpha 0.6,             match:namespace         sideleft              [0-9]           *'
-layerrule = 'ignore_alpha 0.97,            match:namespace         progress'
-layerrule = 'ignore_alpha 0.97,            match:namespace         quick-launcher'
-layerrule = 'ignore_alpha 0.97,            match:namespace         settings'
-layerrule = 'ignore_alpha 0.97,            match:namespace         user-panel'
-layerrule = 'ignore_alpha 0.97,            match:namespace         wallpaper-switcher'
-layerrule = 'ignore_alpha 0,               match:namespace         gtk-layer-shell'
-layerrule = 'match:namespace               gtk4-layer-shell,       no_anim on'
-layerrule = 'match:namespace               quickshell:             .*,                   blur_popups on'
-layerrule = 'match:namespace               quickshell:             .*,                   blur on'
-layerrule = 'match:namespace               quickshell:             .*,                   ignore_alpha 0.79'
-layerrule = 'match:namespace               quickshell:             bar,                  animation slide'
-layerrule = 'match:namespace               quickshell:             actionCenter,         no_anim on'
-layerrule = 'match:namespace               quickshell:             cheatsheet,           animation slide bottom'
-layerrule = 'match:namespace               quickshell:             dock,                 animation slide bottom'
-layerrule = 'match:namespace               quickshell:             screenCorners,        animation popin 120%'
-layerrule = 'match:namespace               quickshell:             lockWindowPusher,     no_anim on'
-layerrule = 'match:namespace               quickshell:             notificationPopup,    animation fade'
-layerrule = 'match:namespace               quickshell:             overlay,              no_anim on'
-layerrule = 'match:namespace               quickshell:             overlay,              ignore_alpha 1'
-layerrule = 'match:namespace               quickshell:             overview,             no_anim on'
-layerrule = 'match:namespace               quickshell:             osk,                  animation slide bottom'
-layerrule = 'match:namespace               quickshell:             polkit,               no_anim on'
-layerrule = 'match:namespace               quickshell:             popup,                xray off'
-layerrule = 'match:namespace               quickshell:             popup,                ignore_alpha 1'
-layerrule = 'match:namespace               quickshell:             mediaControls,        ignore_alpha 1'
-layerrule = 'match:namespace               quickshell:             reloadPopup,          animation slide'
-layerrule = 'match:namespace               quickshell:             regionSelector,       no_anim on'
-layerrule = 'match:namespace               quickshell:             screenshot,           no_anim on'
-layerrule = 'match:namespace               quickshell:             session,              blur on'
-layerrule = 'match:namespace               quickshell:             session,              no_anim on'
-layerrule = 'match:namespace               quickshell:             session,              ignore_alpha 0'
-layerrule = 'match:namespace               quickshell:             sidebarRight,          animation slide right'
-layerrule = 'match:namespace               quickshell:             sidebarLeft,           animation slide left'
-layerrule = 'match:namespace               quickshell:             verticalBar,           animation slide'
-layerrule = 'match:namespace               quickshell:             osk,                   order -1'
-layerrule = 'match:namespace               quickshell:             wallpaperSelector,     animation slide top'
-layerrule = 'match:namespace               quickshell:             wNotificationCenter,   no_anim on'
-layerrule = 'match:namespace               quickshell:             wOnScreenDisplay,      no_anim on'
-layerrule = 'match:namespace               quickshell:             wStartMenu,            no_anim on'
-layerrule = 'match:namespace               quickshell:             wTaskView,             ignore_alpha 0'
-layerrule = 'match:namespace               quickshell:             wTaskView,              no_anim on'
-layerrule = 'no_anim on,                   match:namespace         anyrun'
-layerrule = 'no_anim on,                   match:namespace         hyprpicker'
-layerrule = 'no_anim on,                   match:namespace         indicator.             *'
-layerrule = 'no_anim on,                   match:namespace         noanim'
-layerrule = 'no_anim on,                   match:namespace         osk'
-layerrule = 'no_anim on,                   match:namespace         overview'
-layerrule = 'no_anim on,                   match:namespace         selection'
-layerrule = 'xray 1,                       match:namespace         .                      *'
-
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarRight',
-    },
-    animation = 'slide right',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarLeft',
-    },
-    animation = 'slide left',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:verticalBar',
-    },
-    animation = 'slide',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wallpaperSelector',
-    },
-    animation = 'slide top',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wNotificationCenter',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wOnScreenDisplay',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wStartMenu',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
+lr('gtk-layer-shell', {
+    blur = true,
     ignore_alpha = 0,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
+lr('indicator.*', {
+    blur = true,
+    ignore_alpha = 0.6,
     no_anim = true,
 })
-
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarRight',
-    },
-    animation = 'slide right',
+lr('launcher', {
+    blur = true,
+    ignore_alpha = 0.5,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarLeft',
-    },
-    animation = 'slide left',
+lr('logout_dialog', {
+    blur = true,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:verticalBar',
-    },
-    animation = 'slide',
+lr('nwg-drawer', {
+    blur = true,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wallpaperSelector',
-    },
+lr('session[0-9]*', {
+    blur = true,
+})
+lr('notifications', {
+    blur = true,
+    ignore_alpha = 0.7,
+    animation = 'fade',
+})
+lr('wallpaper-switcher', {
+    blur = true,
+    ignore_alpha = 0.97,
+    animation = 'fade',
+})
+lr('nwg-dock', {
+    blur = true,
+    animation = 'slide up',
+})
+lr('waybar', {
+    blur = true,
     animation = 'slide top',
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wNotificationCenter',
-    },
-    no_anim = true,
+lr('hyprpaper', {
+    animation = 'fade',
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wOnScreenDisplay',
-    },
-    no_anim = true,
+lr('selection', {
+    animation = 'fade',
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wStartMenu',
-    },
-    no_anim = true,
+lr('user-panel:w', {
+    animation = 'fade',
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
-    ignore_alpha = 0,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
-    no_anim = true,
-})
-
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarRight',
-    },
-    animation = 'slide right',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarLeft',
-    },
+lr('sideleft.*', {
     animation = 'slide left',
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:verticalBar',
-    },
-    animation = 'slide',
-})
-hl.layer_rule({
-    match = { namespace = 'quickshell:wallpaperSelector' },
-    animation = 'slide top',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wNotificationCenter',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wOnScreenDisplay',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wStartMenu',
-    },
-    no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
-    ignore_alpha = 0,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
-    no_anim = true,
-})
-
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarRight',
-    },
+lr('sideright.*', {
     animation = 'slide right',
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:sidebarLeft',
-    },
-    animation = 'slide left',
+
+lr('quickshell:.*', {
+    blur = true,
+    blur_popups = true,
+    ignore_alpha = 0.79,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:verticalBar',
-    },
-    animation = 'slide',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wallpaperSelector',
-    },
-    animation = 'slide top',
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wNotificationCenter',
-    },
+lr_many({
+    'quickshell:actionCenter',
+    'quickshell:lockWindowPusher',
+    'quickshell:overview',
+    'quickshell:polkit',
+    'quickshell:regionSelector',
+    'quickshell:screenshot',
+    'quickshell:wNotificationCenter',
+    'quickshell:wOnScreenDisplay',
+    'quickshell:wStartMenu',
+}, {
     no_anim = true,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wOnScreenDisplay',
-    },
+lr('quickshell:overlay', {
     no_anim = true,
+    ignore_alpha = 1,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wStartMenu',
-    },
+lr('quickshell:session', {
     no_anim = true,
-})
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
     ignore_alpha = 0,
 })
-hl.layer_rule({
-    match = {
-        namespace = 'quickshell:wTaskView',
-    },
+lr('quickshell:wTaskView', {
     no_anim = true,
+    ignore_alpha = 0,
+})
+lr('quickshell:bar', {
+    animation = 'slide',
+})
+lr('quickshell:cheatsheet', {
+    animation = 'slide bottom',
+})
+lr('quickshell:dock', {
+    animation = 'slide bottom',
+})
+lr('quickshell:notificationPopup', {
+    animation = 'fade',
+})
+lr('quickshell:osk', {
+    animation = 'slide bottom',
+    order = -1,
+})
+lr('quickshell:reloadPopup', {
+    animation = 'slide',
+})
+lr('quickshell:screenCorners', {
+    animation = 'popin 120%',
+})
+lr('quickshell:sidebarLeft', {
+    animation = 'slide left',
+})
+lr('quickshell:sidebarRight', {
+    animation = 'slide right',
+})
+lr('quickshell:verticalBar', {
+    animation = 'slide',
+})
+lr('quickshell:wallpaperSelector', {
+    animation = 'slide top',
+})
+lr('quickshell:popup', {
+    xray = false,
+    ignore_alpha = 1,
+})
+lr('quickshell:mediaControls', {
+    ignore_alpha = 1,
 })

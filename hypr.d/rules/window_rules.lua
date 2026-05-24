@@ -1,114 +1,233 @@
-#!/usr/bin/env lua
--- /qompassai/hyprland/hypr.d/rules/window_rules.conf
--- Qompass AI Hyprland Window Rules
+#!/usr/bin/env lua5.4
+---@version 5.4
+-- /qompassai/hyprland/hypr.d/rules/window_rules.lua
+-- Qompass AI Hyprland 0.55+ Window Rules Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
--- References: https://wiki.hypr.land/Configuring/Window-Rules/
-hl.windowrule('max_size 16384 16384')
-hl.windowrule('min_size 1 1')
-hl.windowrule('float on')
-hl.windowrule('fullscreen 0')
-hl.windowrule('tile on')
-hl.windowrule('float off')
-hl.windowrule('opacity 0.7 0.7')
-hl.windowrule('allows_input on, match:class ^(steam)$')
-hl.windowrule('focus_on_activate on, match:class ^(steam)$')
-hl.windowrule('focus_on_activate on, match:class ^(UnrealEditor)$')
-hl.windowrule('border_color rgba(FFB2BCAA) rgba(FFB2BC77),      match:pin 1')
-hl.windowrule(
-    'border_size 0,                                   match:workspace w[tv1]s[false],             match:float 0'
-)
-hl.windowrule(
-    'border_size 0,                                   match:workspace f[1]s[false],               match:float 0'
-)
-hl.windowrule(
-    'rounding 0,                                      match:workspace w[tv1]s[false],             match:float 0'
-)
-hl.windowrule(
-    'rounding 0,                                      match:workspace f[1]s[false],               match:float 0'
-)
-hl.windowrule('center on,                                       match:class ^(nm-connection-editor)$')
-hl.windowrule('center on,                                       match:class ^(nwg-drawer)$')
-hl.windowrule('center on,                                       match:class ^(pavucontrol)$')
-hl.windowrule('center on,                                       match:class ^(org.pulseaudio.pavucontrol)$')
-hl.windowrule('center on,                                       match:title ^(Open File)(.*)$')
-hl.windowrule('center on,                                       match:title ^(Select a File)(.*)$')
-hl.windowrule('center on,                                       match:title ^(Choose wallpaper)(.*)$')
-hl.windowrule('center on,                                       match:title ^(Open Folder)(.*)$')
-hl.windowrule('center on,                                       match:title ^(Save As)(.*)$')
-hl.windowrule('center on,                                       match:title ^(Library)(.*)$')
-hl.windowrule('center on,                                       match:title ^(File Upload)(.*)$')
-hl.windowrule([[float on,                                        match:class ^(blueberry\.py)$]])
-hl.windowrule('float on,                                        match:class ^(steam)$')
-hl.windowrule('float on,                                        match:class ^(guifetch)$')
-hl.windowrule(
-    'float on,                                        match:class ^(kitty)$,            match:title ^(kitty)$'
-)
-hl.windowrule('float on,                                        match:class ^(nm-connection-editor)$')
-hl.windowrule('float on,                                        match:class ^(nwg-drawer)$')
-hl.windowrule('float on,                                        match:class ^(org.pulseaudio.pavucontrol)$')
-hl.windowrule('float on,                                        match:class ^(pavucontrol)$')
-hl.windowrule('float on,                                        match:title ^(Choose wallpaper)(.*)$')
-hl.windowrule('float on,                                        match:title ^(File Upload)(.*)$')
-hl.windowrule('float on,                                        match:title ^(HyprEmoji)$')
-hl.windowrule('float on,                    match:title                       ^(Open File)(.*)$')
-hl.windowrule('float on,                    match:title                       ^(Select a File)(.*)$')
-hl.windowrule('float on,                    match:title                       ^(Open Folder)(.*)$')
-hl.windowrule('float on,                    match:title                       ^(Save As)(.*)$')
-hl.windowrule('float on,                    match:title                       ^(Library)(.*)$')
-hl.windowrule(
-    [[float on,                    match:title                       ^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]]
-)
-hl.windowrule('idle_inhibit fullscreen,     match:class *')
-hl.windowrule('immediate on,                match:class                       ^(steam_app)$')
-hl.windowrule('immediate on,                match:class                       ^(steam_app_.*)$')
-hl.windowrule('immediate on,                match:class                       ^(UnrealEditor)$')
-hl.windowrule([[immediate on,                match:title                       .*\.exe]])
-hl.windowrule(
-    [[keep_aspect_ratio on,        match:title                       ^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]]
-)
-hl.windowrule('match:class ^()$,            match:title ^()$,                 no_blur on')
-hl.windowrule('match:class .*,              no_blur on')
-hl.windowrule(
-    [[match:class                  ^jetbrains-.*$,                   match:float 1,                                        match:title ^$|^\s$|^win\d+$,     no_initial_focus on]]
-)
-hl.windowrule('match:class                  ^(Zotero)$,                       float on')
-hl.windowrule('match:class                  ^(Zotero)$,                       size (monitor_w*.45) (monitor_h*.45)')
-hl.windowrule('min_size 1 1,                match:class ^(steam)$,            match:title ^()$')
-hl.windowrule([[move 73% 72%,                match:title ^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]])
-hl.windowrule(
-    'move                         (cursor_x-(window_w*0.5)) (cursor_y-(window_h*0.05)),         match:title ^(HyprEmoji)$'
-)
-hl.windowrule([[pin on,                      match:title ^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]])
-hl.windowrule('no_anim on,                  match:class ^(cs2)$')
-hl.windowrule('no_blur on,                  match:xwayland 1')
-hl.windowrule('no_blur on,                  match:class ^(UnrealEditor)$')
-hl.windowrule('no_dim on,                   match:class ^(steam)$')
-hl.windowrule('no_dim on,                   match:class ^(UnrealEditor)$')
-hl.windowrule([[no_initial_focus on,         match:class ^UnrealEditor$,       match:title ^\w*$]])
-hl.windowrule('no_shadow on,                match:float 0')
-hl.windowrule('no_shadow on,                match:class ^(UnrealEditor)$')
-hl.windowrule('opacity 1.0 1.0,             match:class ^(org.inkscape.Inkscape)$')
-hl.windowrule('opacity 0.85,                match:class ^(foot)$')
-hl.windowrule('opacity 1.0,                 match:class ^(steam(|_app_[0-9]+))$')
-hl.windowrule('opacity 1.0,                 match:class ^(steamweb(|_app_[0-9]+))$')
-hl.windowrule('opacity 1.0                  override 0.6 override 1.0 override,            match:class ^(steam)$')
-hl.windowrule(
-    'opacity 1.0 override 1.0     override 1.0 override,                         match:class ^(UnrealEditor)$'
-)
-hl.windowrule('opacity 0.0                  override 0.0 override,                         match:class ^(Vesktop)$')
--- windowrule = opacity 0.7 0.7,             match:class ^(org\.pwmt\.zathura)$
--- windowrule = tile on,                     match:class ^(org\.pwmt\.zathura)$
-hl.windowrule('opaque on,                   match:class ^(.*audacity.*)$')
-hl.windowrule(
-    'opaque on,                   match:class ^(.*)$,                            match:title ^(.*)$, match:content popup'
-)
-hl.windowrule('opaque on,                   match:class ^(.*)$, match:title ^(.*)$, match:content dropdown_menu')
-hl.windowrule('size 45% 45%,                match:class ^(nm-connection-editor)$')
-hl.windowrule('size 45% 45%,                match:class ^(org.pulseaudio.pavucontrol)$')
-hl.windowrule('size 45% 45%,                match:class ^(pavucontrol)$')
-hl.windowrule([[size 25% 25%,                match:title ^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]])
-hl.windowrule('stay_focused on,             match:class ^(steam)$,              match:title ^()$')
-hl.windowrule([[suppress_event activate,     match:class ^UnrealEditor$,         match:title ^\w*$]])
-hl.windowrule([[tile on,                     match:class ^dev\.warp\.Warp$]])
-hl.windowrule([[group unset,                 match:class ^UnrealEditor$,         match:title ^\w*$]])
+---@source  https://wiki.hypr.land/Configuring/Window-Rules/
+local lib = require('hypr.d/lib/init')
+local wr = lib.wr
+wr('suppress-maximize', {
+    match = {
+        class = '.*',
+    },
+    suppress_event = 'maximize',
+})
+wr('idle-inhibit-fullscreen', {
+    match = { class = '.*' },
+    idle_inhibit = 'fullscreen',
+})
+wr('no-shadow-tiled', {
+    match = { float = false },
+    no_shadow = true,
+})
+wr('xwayland-no-blur', {
+    match = {
+        xwayland = true,
+    },
+    no_blur = true,
+})
+wr('pin-border', {
+    match = {
+        pin = true,
+    },
+    border_color = 'rgba(FFB2BCAA) rgba(FFB2BC77)',
+})
+
+wr('fix-xwayland-drag', {
+    match = {
+        class = '^$',
+        title = '^$',
+        xwayland = true,
+        float = true,
+        fullscreen = false,
+        pin = false,
+    },
+    no_focus = true,
+})
+wr('smart-border-tv', {
+    match = {
+        workspace = 'w[tv1]s[false]',
+        float = false,
+    },
+    border_size = 0,
+    rounding = 0,
+})
+wr('smart-border-f1', {
+    match = {
+        workspace = 'f[1]s[false]',
+        float = false,
+    },
+    border_size = 0,
+    rounding = 0,
+})
+wr('steam-float', {
+    match = {
+        class = '^(steam)$',
+    },
+    allows_input = true,
+    float = true,
+    no_dim = true,
+    focus_on_activate = true,
+    opacity = '1.0 override 0.6 override 1.0 override',
+})
+wr('steam-empty-title', {
+    match = {
+        class = '^(steam)$',
+        title = '^()$',
+    },
+    min_size = '1 1',
+    stay_focused = true,
+})
+wr('steam-app-immediate', {
+    match = {
+        class = '^(steam_app_.*)$',
+    },
+    immediate = true,
+})
+wr('cs2-no-anim', {
+    match = { class = '^(cs2)$' },
+    no_anim = true,
+})
+wr('exe-immediate', {
+    match = {
+        title = [[\.exe$]],
+    },
+    immediate = true,
+})
+
+wr('unreal-rules', {
+    match = {
+        class = '^(UnrealEditor)$',
+    },
+    focus_on_activate = true,
+    immediate = true,
+    no_blur = true,
+    no_dim = true,
+    no_shadow = true,
+    opacity = '1.0 override 1.0 override 1.0 override',
+})
+wr('unreal-suppress', {
+    match = {
+        class = '^UnrealEditor$',
+        title = [[^\w*$]],
+    },
+    suppress_event = 'activate',
+    no_initial_focus = true,
+    group = 'unset',
+})
+wr('jetbrains-no-focus', {
+    match = {
+        class = '^jetbrains-.*$',
+        float = true,
+        title = [[^($|\s|win\d+)$]],
+    },
+    no_initial_focus = true,
+})
+
+wr('vesktop-opacity', {
+    match = {
+        class = '^(Vesktop)$',
+    },
+    opacity = '0.0 override 0.0 override',
+})
+wr('inkscape-opacity', {
+    match = {
+        class = '^(org.inkscape.Inkscape)$',
+    },
+    opacity = '1.0 1.0',
+})
+wr('foot-opacity', {
+    match = {
+        class = '^(foot)$',
+    },
+    opacity = '0.85',
+})
+wr('nm-rules', {
+    match = {
+        class = '^(nm-connection-editor)$',
+    },
+    float = true,
+    center = true,
+    size = '45% 45%',
+})
+wr('pavucontrol-rules', {
+    match = {
+        class = '^(org.pulseaudio.pavucontrol|pavucontrol)$',
+    },
+    float = true,
+    center = true,
+    size = '45% 45%',
+})
+wr('nwg-drawer-rules', {
+    match = {
+        class = '^(nwg-drawer)$',
+    },
+    float = true,
+    center = true,
+})
+wr('blueberry-float', {
+    match = { class = [[^(blueberry\.py)$]] },
+    float = true,
+})
+wr('guifetch-float', {
+    match = { class = '^(guifetch)$' },
+    float = true,
+})
+wr('warp-tile', {
+    match = {
+        class = [[^dev\.warp\.Warp$]],
+    },
+    tile = true,
+})
+wr('audacity-opaque', {
+    match = {
+        class = '^(.*audacity.*)$',
+    },
+    opaque = true,
+})
+wr('zotero-rules', {
+    match = {
+        class = '^(Zotero)$',
+    },
+    float = true,
+    size = '(monitor_w*0.45) (monitor_h*0.45)',
+})
+
+wr('pic_in_pic-rules', {
+    match = {
+        title = [[^([Pp]icture[-\s]?[Ii]n[-\s]?[Pp]icture)(.*)$]],
+    },
+    float = true,
+    pin = true,
+    keep_aspect_ratio = true,
+    size = '25% 25%',
+    move = '73% 72%',
+})
+wr('hypremoji-rules', {
+    match = {
+        title = '^(HyprEmoji)$',
+    },
+    float = true,
+    move = '(cursor_x-(window_w*0.5)) (cursor_y-(window_h*0.05))',
+})
+wr('dialog-float-center', {
+    match = {
+        title = '^(Open File|Select a File|Choose wallpaper|Open Folder|Save As|Library|File Upload)(.*)$',
+    },
+    float = true,
+    center = true,
+})
+
+wr('popup-opaque', {
+    match = {
+        content = 'popup',
+    },
+    opaque = true,
+})
+wr('dropdown-opaque', {
+    match = {
+        content = 'dropdown_menu',
+    },
+    opaque = true,
+})

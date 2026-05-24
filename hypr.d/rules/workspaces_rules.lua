@@ -5,6 +5,17 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 ---------------------------------------------------------
 ---@source https://wiki.hypr.land/Configuring/Workspace-Rules/#rules | https://wiki.hypr.land/Configuring/Variables/#binds
-workspace = 'f[1]s[false],                     gapsout:0, gapsin:0'
-workspace = 'special:special,                  gapsout:30'
-workspace = 'w[tv1]s[false],                   gapsout:0, gapsin:0'
+hl.workspace_rule({
+    workspace = 'w[tv1]s[false]',
+    gaps_out = 0,
+    gaps_in = 0,
+})
+hl.workspace_rule({
+    workspace = 'f[1]s[false]',
+    gaps_out = 0,
+    gaps_in = 0,
+})
+hl.workspace_rule({
+    workspace = 'special:special',
+    gaps_out = 30,
+})
