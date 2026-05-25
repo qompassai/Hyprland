@@ -231,3 +231,17 @@ wr('dropdown-opaque', {
     },
     opaque = true,
 })
+wr('vroid-studio-rules', {
+    match = {
+        title = '^(VRoid Studio)(.*)$',
+    },
+    float = true,
+    size = '1280 800',
+})
+
+wr('wine-explorer-rules', {
+    match = {
+        class = '^(explorer.exe)$',
+    },
+    float = true,
+})

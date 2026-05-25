@@ -4,7 +4,5 @@
 -- Qompass AI Hyprland 0.55+ Executable Lua Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
 -----------------------------------------------------
-local M = {}
 require('hypr.d/exec/apps')
 require('hypr.d/exec/start')
-return M
