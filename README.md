@@ -7,7 +7,7 @@
 
 <h3> Hyprland: Lightweight protocol for your wayland needs </h3>
 
-> ⚠️ **Work in Progress** — Actively migrating from hyprlang `.conf` to Lua 5.4. Both `.conf` and `.lua` files coexist during transition.
+> ⚠️ **Work in Progress** — Actively migrating from hyprlang `.conf` to Lua 5.4.
 
 ![Repository Views](https://komarev.com/ghpvc/?username=qompassai-Hyprland)
 ![GitHub all releases](https://img.shields.io/github/downloads/qompassai/Hyprland/total?style=flat-square)
@@ -42,133 +42,106 @@ Config is organized as parallel `.conf` (legacy hyprlang) and `.lua` (Hyprland 0
 ├── application-style.conf
 ├── citation.bib
 ├── CITATION.cff
-├── CITATION.lua
 ├── flake.lock
 ├── flake.nix
-├── h2l.py                          
-├── hypr.d
-│   ├── colors.conf
-│   ├── core
-│   │   ├── env.conf
-│   │   ├── env.lua
-│   │   ├── general.conf
-│   │   ├── general.lua
-│   │   ├── monitors.conf
-│   │   ├── monitors.lua
-│   │   ├── version.conf
-│   │   └── version.lua
-│   ├── core.conf
-│   ├── core.lua
-│   ├── debug
-│   │   ├── gtk_debug.{conf,lua}
-│   │   ├── hypr_debug.{conf,lua}
-│   │   ├── intel_debug.{conf,lua}
-│   │   ├── mesa_debug.{conf,lua}
-│   │   ├── nvidia_debug.{conf,lua}
-│   │   ├── opengl_debug.{conf,lua}
-│   │   ├── proton_debug.{conf,lua}
-│   │   ├── qt_debug.{conf,lua}
-│   │   ├── sdl_debug.{conf,lua}
-│   │   └── vulkan_debug.{conf,lua}
-│   ├── debug.conf
-│   ├── debug.lua
-│   ├── decorations
-│   │   ├── decoration.conf
-│   │   ├── decoration.lua
-│   │   └── shaders
-│   │       ├── chromatic_abberation.frag
-│   │       ├── crt.frag
-│   │       ├── drugs.frag
-│   │       ├── extradark.frag
-│   │       ├── invert.frag
-│   │       └── solarized.frag
-│   ├── decorations.conf
-│   ├── decorations.lua
-│   ├── exec
-│   │   ├── apps.{conf,lua}
-│   │   └── start.{conf,lua}
-│   ├── exec.conf
-│   ├── exec.lua
-│   ├── experimental
-│   │   ├── hypr_experimental.{conf,lua}
-│   │   └── test.{conf,lua}
-│   ├── experimental.conf
-│   ├── experimental.lua
-│   ├── graphics
-│   │   ├── aq.{conf,lua}
-│   │   ├── electron.{conf,lua}
-│   │   ├── google.{conf,lua}
-│   │   ├── gtk.{conf,lua}
-│   │   ├── hypr_graphics.{conf,lua}
-│   │   ├── input.{conf,lua}
-│   │   ├── intel.{conf,lua}
-│   │   ├── mesa.{conf,lua}
-│   │   ├── moz.{conf,lua}
-│   │   ├── nvidia.{conf,lua}
-│   │   ├── proton.{conf,lua}
-│   │   ├── qt.{conf,lua}
-│   │   ├── README.md
-│   │   ├── sdl.{conf,lua}
-│   │   ├── unreal.{conf,lua}
-│   │   ├── vulkan.{conf,lua}
-│   │   └── x11.{conf,lua}
-│   ├── graphics.conf
-│   ├── graphics.lua
-│   ├── input
-│   │   ├── cursor.{conf,lua}
-│   │   ├── device.{conf,lua}
-│   │   ├── gesture.{conf,lua}
-│   │   ├── input.{conf,lua}
-│   │   └── inputenv.{conf,lua}
-│   ├── input.conf
-│   ├── input.lua
-│   ├── keybinds
-│   │   ├── binds.{conf,lua}
-│   │   ├── h2l.lua
-│   │   ├── media_bindings.{conf,lua}
-│   │   ├── net_bindings.{conf,lua}
-│   │   ├── util_bindings.{conf,lua}
-│   │   └── workspace_bindings.{conf,lua}
-│   ├── keybinds.conf
-│   ├── keybinds.lua
-│   ├── layouts
-│   │   ├── dwindle.{conf,lua}
-│   │   ├── gestures.{conf,lua}
-│   │   ├── groups.{conf,lua}
-│   │   ├── lockdead.png
-│   │   ├── master.{conf,lua}
-│   │   ├── misc.{conf,lua}
-│   │   └── plugins.{conf,lua}
-│   ├── layouts.conf
-│   ├── layouts.lua
-│   ├── media
-│   │   ├── animations.{conf,lua}
-│   │   ├── animations-fast.{conf,lua}
-│   │   ├── animations-optimized.{conf,lua}
-│   │   ├── audio.{conf,lua}
-│   │   ├── ecosystem.{conf,lua}
-│   │   ├── quirks.{conf,lua}
-│   │   └── render.{conf,lua}
-│   ├── media.conf
-│   ├── media.lua
-│   ├── rules
-│   │   ├── layer_rules.{conf,lua}
-│   │   ├── window_rules.{conf,lua}
-│   │   └── workspaces_rules.{conf,lua}
-│   ├── rules.conf
-│   ├── rules.lua
-│   └── wallpaper
-│       ├── hyprpaper.conf
-│       ├── hyprpaper.lua
-│       └── wp
-│           └── wall0.png
+├── hyprd
+│   ├── colors.lua
+│   ├── core
+│   │   ├── env.lua
+│   │   ├── general.lua
+│   │   ├── monitors.lua
+│   │   └── version.lua
+│   ├── core.lua
+│   ├── debug
+│   │   ├── gtk_debug.lua
+│   │   ├── hypr_debug.lua
+│   │   ├── intel_debug.lua
+│   │   ├── mesa_debug.lua
+│   │   ├── nvidia_debug.lua
+│   │   ├── opengl_debug.lua
+│   │   ├── proton_debug.lua
+│   │   ├── qt_debug.lua
+│   │   ├── sdl_debug.lua
+│   │   └── vulkan_debug.lua
+│   ├── debug.lua
+│   ├── decorations
+│   │   ├── decoration.lua
+│   │   └── shaders
+│   ├── decorations.lua
+│   ├── exec
+│   │   ├── apps.lua
+│   │   └── start.lua
+│   ├── exec.lua
+│   ├── experimental
+│   │   ├── hypr_experimental.lua
+│   │   └── test.lua
+│   ├── experimental.lua
+│   ├── graphics
+│   │   ├── aq.lua
+│   │   ├── electron.lua
+│   │   ├── google.lua
+│   │   ├── gtk.lua
+│   │   ├── hypr_graphics.lua
+│   │   ├── intel.lua
+│   │   ├── mesa.lua
+│   │   ├── moz.lua
+│   │   ├── nvidia.lua
+│   │   ├── proton.lua
+│   │   ├── qt.lua
+│   │   ├── README.md
+│   │   ├── sdl.lua
+│   │   ├── unreal.lua
+│   │   ├── vulkan.lua
+│   │   └── x11.lua
+│   ├── graphics.lua
+│   ├── input
+│   │   ├── cursor.lua
+│   │   ├── device.lua
+│   │   ├── gesture.lua
+│   │   ├── inputenv.lua
+│   │   └── input.lua
+│   ├── input.lua
+│   ├── keybinds
+│   │   ├── binds.lua
+│   │   ├── media_bindings.lua
+│   │   ├── net_bindings.lua
+│   │   ├── util_bindings.lua
+│   │   └── workspace_bindings.lua
+│   ├── keybinds.lua
+│   ├── layouts
+│   │   ├── dwindle.lua
+│   │   ├── gestures.lua
+│   │   ├── groups.lua
+│   │   ├── lockdead.png
+│   │   ├── master.lua
+│   │   ├── misc.lua
+│   │   └── plugins.lua
+│   ├── layouts.lua
+│   ├── lib
+│   │   └── init.lua
+│   ├── media
+│   │   ├── animations-fast.lua
+│   │   ├── animations.lua
+│   │   ├── animations-optimized.lua
+│   │   ├── audio.lua
+│   │   ├── ecosystem.lua
+│   │   ├── quirks.lua
+│   │   └── render.lua
+│   ├── media.lua
+│   ├── rules
+│   │   ├── layer_rules.lua
+│   │   ├── window_rules.lua
+│   │   └── workspaces_rules.lua
+│   ├── rules.lua
+│   └── wallpaper
+│       ├── hyprpaper.conf
+│       └── wp
 ├── hypridle.conf
-├── hyprland.conf
 ├── hyprland.lua
 ├── hyprland.pc.in
 ├── hyprlauncher.conf
 ├── hyprlock
-│   └── status.sh
+│   └── status.sh
 ├── hyprlock.conf
 ├── hyprqt6engine.conf
 ├── hyprsunset.conf
@@ -180,23 +153,162 @@ Config is organized as parallel `.conf` (legacy hyprlang) and `.lua` (Hyprland 0
 ├── monitors.json
 ├── qompass.jpg
 ├── README.md
+├── README.pdf
 ├── renovate.jsonc
 ├── rustrland.toml
 ├── scripts
-│   ├── cache_setup.sh
-│   ├── fix.py
-├   ├── h2l.py                     # hyprlang → Lua converter
-│   ├── gamemode.sh
-│   ├── hyprlua.lua
-│   ├── mirrorlist.txt
-│   ├── ps.sh
-│   └── qm.sh
+│   ├── cache_setup.sh
+│   ├── fix.py
+│   ├── gamemode.sh
+│   ├── geoclue.sh
+│   ├── h2l.py
+│   ├── hyprlua.lua
+│   ├── mirrorlist.txt
+│   ├── ps.sh
+│   └── qm.sh
 ├── shaders
-│   └── *.glsl -> /usr/share/aether/shaders/*.glsl
-├── tree.md
+│   ├── amber.glsl -> /usr/share/aether/shaders/amber.glsl
+│   ├── amber-monitor.glsl -> /usr/share/aether/shaders/amber-monitor.glsl
+│   ├── anonymous-hacker.glsl -> /usr/share/aether/shaders/anonymous-hacker.glsl
+│   ├── apple2-color-fringe.glsl -> /usr/share/aether/shaders/apple2-color-fringe.glsl
+│   ├── arctic-blue.glsl -> /usr/share/aether/shaders/arctic-blue.glsl
+│   ├── ascii-art.glsl -> /usr/share/aether/shaders/ascii-art.glsl
+│   ├── autumn-leaves.glsl -> /usr/share/aether/shaders/autumn-leaves.glsl
+│   ├── blade-runner-rain.glsl -> /usr/share/aether/shaders/blade-runner-rain.glsl
+│   ├── blood-orange.glsl -> /usr/share/aether/shaders/blood-orange.glsl
+│   ├── blue-light-reduce.glsl -> /usr/share/aether/shaders/blue-light-reduce.glsl
+│   ├── brightness-boost.glsl -> /usr/share/aether/shaders/brightness-boost.glsl
+│   ├── c64-raster-bars.glsl -> /usr/share/aether/shaders/c64-raster-bars.glsl
+│   ├── cel-shade.glsl -> /usr/share/aether/shaders/cel-shade.glsl
+│   ├── cherry-blossom.glsl -> /usr/share/aether/shaders/cherry-blossom.glsl
+│   ├── chromatic.glsl -> /usr/share/aether/shaders/chromatic.glsl
+│   ├── chromatic-shift.glsl -> /usr/share/aether/shaders/chromatic-shift.glsl
+│   ├── cloaking-device.glsl -> /usr/share/aether/shaders/cloaking-device.glsl
+│   ├── code-rain.glsl -> /usr/share/aether/shaders/code-rain.glsl
+│   ├── color-blind-deuteranopia.glsl -> /usr/share/aether/shaders/color-blind-deuteranopia.glsl
+│   ├── color-invert.glsl -> /usr/share/aether/shaders/color-invert.glsl
+│   ├── color-pop.glsl -> /usr/share/aether/shaders/color-pop.glsl
+│   ├── comic-book.glsl -> /usr/share/aether/shaders/comic-book.glsl
+│   ├── common.glsl -> /usr/share/aether/shaders/common.glsl
+│   ├── cool-tone.glsl -> /usr/share/aether/shaders/cool-tone.glsl
+│   ├── crt-amber-flicker.glsl -> /usr/share/aether/shaders/crt-amber-flicker.glsl
+│   ├── crt-breakdown.glsl -> /usr/share/aether/shaders/crt-breakdown.glsl
+│   ├── crt-glitch.glsl -> /usr/share/aether/shaders/crt-glitch.glsl
+│   ├── crt-green-scanlines.glsl -> /usr/share/aether/shaders/crt-green-scanlines.glsl
+│   ├── crunch-mode.glsl -> /usr/share/aether/shaders/crunch-mode.glsl
+│   ├── cyber-grid.glsl -> /usr/share/aether/shaders/cyber-grid.glsl
+│   ├── cyberpunk.glsl -> /usr/share/aether/shaders/cyberpunk.glsl
+│   ├── cyberpunk-neon-glitch.glsl -> /usr/share/aether/shaders/cyberpunk-neon-glitch.glsl
+│   ├── cyberpunk-neon.glsl -> /usr/share/aether/shaders/cyberpunk-neon.glsl
+│   ├── data-corruption.glsl -> /usr/share/aether/shaders/data-corruption.glsl
+│   ├── depth-of-field.glsl -> /usr/share/aether/shaders/depth-of-field.glsl
+│   ├── desaturate.glsl -> /usr/share/aether/shaders/desaturate.glsl
+│   ├── desert-sand.glsl -> /usr/share/aether/shaders/desert-sand.glsl
+│   ├── dream.glsl -> /usr/share/aether/shaders/dream.glsl
+│   ├── duotone.glsl -> /usr/share/aether/shaders/duotone.glsl
+│   ├── film-grain.glsl -> /usr/share/aether/shaders/film-grain.glsl
+│   ├── film-projector.glsl -> /usr/share/aether/shaders/film-projector.glsl
+│   ├── focus-mode.glsl -> /usr/share/aether/shaders/focus-mode.glsl
+│   ├── forest-green.glsl -> /usr/share/aether/shaders/forest-green.glsl
+│   ├── frost.glsl -> /usr/share/aether/shaders/frost.glsl
+│   ├── fsociety.glsl -> /usr/share/aether/shaders/fsociety.glsl
+│   ├── gameboy.glsl -> /usr/share/aether/shaders/gameboy.glsl
+│   ├── gameboy-screen.glsl -> /usr/share/aether/shaders/gameboy-screen.glsl
+│   ├── genesis.glsl -> /usr/share/aether/shaders/genesis.glsl
+│   ├── glitch-wave.glsl -> /usr/share/aether/shaders/glitch-wave.glsl
+│   ├── godzilla-mayhem.glsl -> /usr/share/aether/shaders/godzilla-mayhem.glsl
+│   ├── golden-hour.glsl -> /usr/share/aether/shaders/golden-hour.glsl
+│   ├── grayscale.glsl -> /usr/share/aether/shaders/grayscale.glsl
+│   ├── hacker-data-stream.glsl -> /usr/share/aether/shaders/hacker-data-stream.glsl
+│   ├── high-contrast.glsl -> /usr/share/aether/shaders/high-contrast.glsl
+│   ├── hologram.glsl -> /usr/share/aether/shaders/hologram.glsl
+│   ├── holographic-foil.glsl -> /usr/share/aether/shaders/holographic-foil.glsl
+│   ├── holo-interface.glsl -> /usr/share/aether/shaders/holo-interface.glsl
+│   ├── hue-shift-180.glsl -> /usr/share/aether/shaders/hue-shift-180.glsl
+│   ├── hue-shift-90.glsl -> /usr/share/aether/shaders/hue-shift-90.glsl
+│   ├── infrared.glsl -> /usr/share/aether/shaders/infrared.glsl
+│   ├── kindle-mode.glsl -> /usr/share/aether/shaders/kindle-mode.glsl
+│   ├── linux-console-boot.glsl -> /usr/share/aether/shaders/linux-console-boot.glsl
+│   ├── liquid-glass-dither.glsl -> /usr/share/aether/shaders/liquid-glass-dither.glsl
+│   ├── liquid.glsl -> /usr/share/aether/shaders/liquid.glsl
+│   ├── low-light.glsl -> /usr/share/aether/shaders/low-light.glsl
+│   ├── matrix-rain.glsl -> /usr/share/aether/shaders/matrix-rain.glsl
+│   ├── midnight-purple.glsl -> /usr/share/aether/shaders/midnight-purple.glsl
+│   ├── monochrome-amber.glsl -> /usr/share/aether/shaders/monochrome-amber.glsl
+│   ├── monochrome-blue.glsl -> /usr/share/aether/shaders/monochrome-blue.glsl
+│   ├── monochrome-cyan.glsl -> /usr/share/aether/shaders/monochrome-cyan.glsl
+│   ├── monochrome-green.glsl -> /usr/share/aether/shaders/monochrome-green.glsl
+│   ├── monochrome-lavender.glsl -> /usr/share/aether/shaders/monochrome-lavender.glsl
+│   ├── monochrome-mint.glsl -> /usr/share/aether/shaders/monochrome-mint.glsl
+│   ├── monochrome-orange.glsl -> /usr/share/aether/shaders/monochrome-orange.glsl
+│   ├── monochrome-peach.glsl -> /usr/share/aether/shaders/monochrome-peach.glsl
+│   ├── monochrome-pink.glsl -> /usr/share/aether/shaders/monochrome-pink.glsl
+│   ├── monochrome-purple.glsl -> /usr/share/aether/shaders/monochrome-purple.glsl
+│   ├── monochrome-red.glsl -> /usr/share/aether/shaders/monochrome-red.glsl
+│   ├── monochrome-teal.glsl -> /usr/share/aether/shaders/monochrome-teal.glsl
+│   ├── monochrome-yellow.glsl -> /usr/share/aether/shaders/monochrome-yellow.glsl
+│   ├── negative.glsl -> /usr/share/aether/shaders/negative.glsl
+│   ├── neon-pulse.glsl -> /usr/share/aether/shaders/neon-pulse.glsl
+│   ├── night-vision.glsl -> /usr/share/aether/shaders/night-vision.glsl
+│   ├── noir.glsl -> /usr/share/aether/shaders/noir.glsl
+│   ├── ocean.glsl -> /usr/share/aether/shaders/ocean.glsl
+│   ├── oil-paint.glsl -> /usr/share/aether/shaders/oil-paint.glsl
+│   ├── old-crt.glsl -> /usr/share/aether/shaders/old-crt.glsl
+│   ├── phosphor-burn.glsl -> /usr/share/aether/shaders/phosphor-burn.glsl
+│   ├── pixelate-transition.glsl -> /usr/share/aether/shaders/pixelate-transition.glsl
+│   ├── plasma-demo.glsl -> /usr/share/aether/shaders/plasma-demo.glsl
+│   ├── posterize.glsl -> /usr/share/aether/shaders/posterize.glsl
+│   ├── power-crunch.glsl -> /usr/share/aether/shaders/power-crunch.glsl
+│   ├── protanopia.glsl -> /usr/share/aether/shaders/protanopia.glsl
+│   ├── pulse-wave.glsl -> /usr/share/aether/shaders/pulse-wave.glsl
+│   ├── purple-haze.glsl -> /usr/share/aether/shaders/purple-haze.glsl
+│   ├── radar-scan.glsl -> /usr/share/aether/shaders/radar-scan.glsl
+│   ├── reading-mode.glsl -> /usr/share/aether/shaders/reading-mode.glsl
+│   ├── retro-glow.glsl -> /usr/share/aether/shaders/retro-glow.glsl
+│   ├── retro-vaporwave-wave.glsl -> /usr/share/aether/shaders/retro-vaporwave-wave.glsl
+│   ├── retro-vhs.glsl -> /usr/share/aether/shaders/retro-vhs.glsl
+│   ├── rgb-split.glsl -> /usr/share/aether/shaders/rgb-split.glsl
+│   ├── saturate.glsl -> /usr/share/aether/shaders/saturate.glsl
+│   ├── scanlines.glsl -> /usr/share/aether/shaders/scanlines.glsl
+│   ├── scanlines-retro-tv.glsl -> /usr/share/aether/shaders/scanlines-retro-tv.glsl
+│   ├── screen-shake.glsl -> /usr/share/aether/shaders/screen-shake.glsl
+│   ├── sepia.glsl -> /usr/share/aether/shaders/sepia.glsl
+│   ├── signal-interference.glsl -> /usr/share/aether/shaders/signal-interference.glsl
+│   ├── soft-contrast.glsl -> /usr/share/aether/shaders/soft-contrast.glsl
+│   ├── solarize.glsl -> /usr/share/aether/shaders/solarize.glsl
+│   ├── starfield-warp.glsl -> /usr/share/aether/shaders/starfield-warp.glsl
+│   ├── sunset.glsl -> /usr/share/aether/shaders/sunset.glsl
+│   ├── system-meltdown.glsl -> /usr/share/aether/shaders/system-meltdown.glsl
+│   ├── technicolor.glsl -> /usr/share/aether/shaders/technicolor.glsl
+│   ├── terminal-boot.glsl -> /usr/share/aether/shaders/terminal-boot.glsl
+│   ├── terminal-typing-effect.glsl -> /usr/share/aether/shaders/terminal-typing-effect.glsl
+│   ├── test-passthrough.glsl -> /usr/share/aether/shaders/test-passthrough.glsl
+│   ├── thermal.glsl -> /usr/share/aether/shaders/thermal.glsl
+│   ├── thermal-vision.glsl -> /usr/share/aether/shaders/thermal-vision.glsl
+│   ├── tritanopia.glsl -> /usr/share/aether/shaders/tritanopia.glsl
+│   ├── tritone.glsl -> /usr/share/aether/shaders/tritone.glsl
+│   ├── tron-grid.glsl -> /usr/share/aether/shaders/tron-grid.glsl
+│   ├── tv-static.glsl -> /usr/share/aether/shaders/tv-static.glsl
+│   ├── underwater.glsl -> /usr/share/aether/shaders/underwater.glsl
+│   ├── vaporwave.glsl -> /usr/share/aether/shaders/vaporwave.glsl
+│   ├── vhs-tracking.glsl -> /usr/share/aether/shaders/vhs-tracking.glsl
+│   ├── vibe-00s.glsl -> /usr/share/aether/shaders/vibe-00s.glsl
+│   ├── vibe-40s.glsl -> /usr/share/aether/shaders/vibe-40s.glsl
+│   ├── vibe-50s.glsl -> /usr/share/aether/shaders/vibe-50s.glsl
+│   ├── vibe-60s.glsl -> /usr/share/aether/shaders/vibe-60s.glsl
+│   ├── vibe-70s.glsl -> /usr/share/aether/shaders/vibe-70s.glsl
+│   ├── vibe-80s.glsl -> /usr/share/aether/shaders/vibe-80s.glsl
+│   ├── vibe-90s.glsl -> /usr/share/aether/shaders/vibe-90s.glsl
+│   ├── vintage-film.glsl -> /usr/share/aether/shaders/vintage-film.glsl
+│   ├── vintage.glsl -> /usr/share/aether/shaders/vintage.glsl
+│   ├── warm-tone.glsl -> /usr/share/aether/shaders/warm-tone.glsl
+│   ├── wave-distortion.glsl -> /usr/share/aether/shaders/wave-distortion.glsl
+│   ├── xray.glsl -> /usr/share/aether/shaders/xray.glsl
+│   └── zoom-blur.glsl -> /usr/share/aether/shaders/zoom-blur.glsl
+├── workspaces.conf
 └── xdph.conf
 
-19 directories, 330 files
+20 directories, 249 files
 ```   
 
 ```
