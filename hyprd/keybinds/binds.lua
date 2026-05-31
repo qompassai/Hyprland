@@ -55,26 +55,15 @@ hl.bind(
         action = 'toggle',
     })
 )
+hl.bind(
+    'SUPER + F',
+    hl.dsp.window.fullscreen({
+        action = 'toggle',
+        mode = 'fullscreen',
+    })
+)
 hl.bind(mainMod .. ' + X', hl.dsp.window.close())
 hl.bind(mainMod .. ' + J', hl.dsp.layout('togglesplit'))
---[[hl.bind(
-    'ALT + TAB',
-    hl.dsp.focus({
-        next = true,
-    })
-)
-     --]]
---[[
-hl.bind(
-    'CTRL + ' .. mainMod .. ' + Backslash',
-    hl.dsp.window.resize({
-        exact = {
-            w = 640,
-            h = 480,
-        },
-    })
-)
---]]
 hl.bind(
     'CTRL + ' .. mainMod .. ' + Right',
     hl.dsp.focus({
@@ -125,22 +114,18 @@ hl.bind(
         workspace = 'r+5',
     })
 )
---[[
 hl.bind(
-    'CTRL + ' .. mainMod .. ' + [',
+    mainMod .. ' + CTRL + bracketleft',
     hl.dsp.focus({
         workspace = 'e-1',
     })
 )
-    --]]
---[[
-   hl.bind(
-    'CTRL + ' .. mainMod .. ' + ]',
+hl.bind(
+    mainMod .. ' + CTRL + ALT + Right',
     hl.dsp.focus({
-        workspace = 'e+1',
+        workspace = 'm+1',
     })
 )
-   --]]
 hl.bind(
     'CTRL + ' .. mainMod .. ' + ALT + Right',
     hl.dsp.focus({
