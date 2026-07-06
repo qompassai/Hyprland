@@ -1,9 +1,15 @@
-#!/usr/bin/env lua
+#!/usr/bin/env lua5.4
 -- /qompassai/hyprland/hypr/hypr.d/graphics/nvidia.lua
 -- Qompass AI Hyprland 0.55+ NVIDIA Graphics Lua Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -------------------------------------------------------
--- References: https://download.nvidia.com/XFree86/Linux-x86_64/570.133.07/README/openglenvvariables.html
+---@source https://download.nvidia.com/XFree86/Linux-x86_64/570.133.07/README/openglenvvariables.html
+---@class HyprlandConfigAPI
+---@field env fun(name: string, value: string|number|boolean)
+
+---@type HyprlandConfigAPI
+hl = hl
+
 hl.env('CUDA_VISIBLE_DEVICES', '0,1,2,3,4')
 -- hl.env(DRI_PRIME, 1) -- individual offload, global if active
 -- hl.env(DRI_PRIME_RENDER_OFFLOAD, 1)
@@ -44,7 +50,9 @@ hl.env('XLIB_SKIP_ARGB_VISUALS', '1')
 -- hl.env('NVIDIA_DEBUG',0x7f)
 -- hl.env('__GL_DEBUG_QUIET',1)
 hl.config({
-    opengl = {
-        nvidia_anti_flicker = true,
-    },
+	opengl = {
+		nvidia_anti_flicker = true,
+	},
 })
+----------------------------
+hl.env('__GL_SHADER_CACHE', '1')

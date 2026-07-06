@@ -33,7 +33,6 @@ wr('pin-border', {
     },
     border_color = 'rgba(FFB2BCAA) rgba(FFB2BC77)',
 })
-
 wr('fix-xwayland-drag', {
     match = {
         class = '^$',
@@ -184,6 +183,8 @@ wr('audacity-opaque', {
     match = {
         class = '^(.*audacity.*)$',
     },
+    opacity = '1.0 override 1.0 override',
+
     opaque = true,
 })
 wr('zotero-rules', {
@@ -218,17 +219,19 @@ wr('dialog-float-center', {
     float = true,
     center = true,
 })
-
 wr('popup-opaque', {
     match = {
         content = 'popup',
     },
+    opacity = '1.0 override 1.0 override',
     opaque = true,
 })
+
 wr('dropdown-opaque', {
     match = {
         content = 'dropdown_menu',
     },
+    opacity = '1.0 override 1.0 override',
     opaque = true,
 })
 wr('vroid-studio-rules', {

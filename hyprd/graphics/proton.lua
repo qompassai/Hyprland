@@ -5,14 +5,20 @@
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -------------------------------------------------------
 ---@source https://github.com/jp7677/dxvk-nvapi/wiki
+---@class HyprlandConfigAPI
+---@field env fun(name: string, value: string|number|boolean)
+
+---@type HyprlandConfigAPI
+hl = hl
+
 local home = os.getenv('HOME')
-local cache_home = os.getenv('XDG_CACHE_HOME') or (os.getenv('HOME') .. '/.cache')
 hl.env('DXVK_ENABLE_NVAPI', '1')
 -- hl.env('DXVK_HDR' , 1)
 hl.env('DXVK_NVAPI_ALLOW_OTHER_DRIVERS', '1')
 -- hl.env('DXVK_NVAPI_DISABLE_ENTRYPOINTS', )
 -- hl.env('DXVK_NVAPI_DRIVER_VERSION' , 58010)
 -- hl.env('DXVK_NVAPI_DRS_SETTINGS' ,)
+hl.env('STEAM_FORCE_DESKTOPUI_SCALING', '1')
 hl.env('DXVK_NVAPI_DRS_NGX_DLSS_FG_OVERRIDE', 'on')
 hl.env('DXVK_NVAPI_DRS_NGX_DLSS_RR_OVERRIDE_RENDER_PRESET_SELECTION', 'render_preset_latest')
 hl.env('DXVK_NVAPI_DRS_NGX_DLSS_SR_OVERRIDE_RENDER_PRESET_SELECTION', 'render_preset_latest')
@@ -30,9 +36,9 @@ hl.env('DXVK_NVAPI_VKREFLEX_INJECT_PRESENT_FRAME_IDS', '0')
 hl.env('DXVK_NVAPI_VKREFLEX_INJECT_SUBMIT_FRAME_IDS', '0')
 hl.env('DXVK_NVAPI_VKREFLEX_LAYER_LOG_LEVEL', 'trace')
 hl.env('DXVK_STATE_CACHE_PATH', home .. '/.local/share/dxvk-cache')
--- hl.env('ENABLE_HDR_WSI' , 1)
--- hl.env('ENABLE_VKBASALT', 1)
--- hl.env('PROTON_ENABLE_HDR' , 1)
+hl.env('ENABLE_HDR_WSI', 1)
+hl.env('ENABLE_VKBASALT', 1)
+hl.env('PROTON_ENABLE_HDR', 1)
 hl.env('PROTON_ENABLE_NGX_UPDATER', '1')
 hl.env('PROTON_ENABLE_NVAPI', '1')
 hl.env('PROTON_ENABLE_WAYLAND', '1')
@@ -44,3 +50,5 @@ hl.env('DXVK_NVAPI_DRS_NGX_DLSS_OVERRIDE_OPTIMAL_SETTINGS', 'perf_to_9x')
 hl.env('DXVK_NVAPI_ENABLE', '0')
 hl.env('DXVK_NVAPI_VKREFLEX', '0')
 --hl.env('VKD3D_CONFIG', 'dxr11,dxr')
+--debug
+hl.env('DXVK_HUD', 'fps,devinfo')

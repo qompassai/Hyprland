@@ -60,7 +60,7 @@ M.vol_mute = 'wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle'
 M.volume_up = 'wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+'
 M.wp = 'hyprpaper'
 M.weather = 'wttr.in'
-M.web = 'firefox'
+M.web = 'chromium'
 M.web2 = 'google-chrome-canary'
 M.window_switcher = 'bemenu-run --window-mode'
 return M
