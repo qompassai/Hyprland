@@ -7,10 +7,8 @@
 ---@source https://github.com/jp7677/dxvk-nvapi/wiki
 ---@class HyprlandConfigAPI
 ---@field env fun(name: string, value: string|number|boolean)
-
 ---@type HyprlandConfigAPI
 hl = hl
-
 local home = os.getenv('HOME')
 hl.env('DXVK_ENABLE_NVAPI', '1')
 -- hl.env('DXVK_HDR' , 1)
