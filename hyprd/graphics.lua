@@ -5,7 +5,7 @@
 -- Copyright (C) 2026 Qompass AI, All rights reserved
 -- ###################################################
 ---@source https://wiki.hypr.land/Configuring/Multi-GPU/
-require('hyprd/graphics/aq')
+--require('hyprd/graphics/aq')
 require('hyprd/graphics/google')
 require('hyprd/graphics/gtk')
 require('hyprd/graphics/intel')
