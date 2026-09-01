@@ -106,6 +106,17 @@ wr('unreal-rules', {
 	no_shadow = true,
 	opacity = '1.0 override 1.0 override 1.0 override',
 })
+hl.window_rule({
+	name = 'slicer-opaque',
+	match = {
+		class = '.*Slicer.*',
+		xwayland = true,
+	},
+	opacity = '1.0 override 1.0 override 1.0 override',
+	opaque = true,
+	force_rgbx = true,
+	no_blur = true,
+})
 wr('unreal-suppress', {
 	match = {
 		class = '^UnrealEditor$',

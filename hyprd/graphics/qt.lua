@@ -6,18 +6,18 @@
 -- ###########################################################
 ---@source https://wiki.hypr.land/Configuring/Environment-variables/ | QT- https://doc.qt.io/qt-6/highdpi.html#environment-variable-reference
 hl.env(
-    'QML_IMPORT_PATH',
-    '/usr/lib/qt6/qml:' .. os.getenv('HOME') .. '/.local/share/qml:' .. os.getenv('HOME') .. '/.config/qml'
+	'QML_IMPORT_PATH',
+	'/usr/lib/qt6/qml:' .. os.getenv('HOME') .. '/.local/share/qml:' .. os.getenv('HOME') .. '/.config/qml'
 )
 hl.env(
-    'QML2_IMPORT_PATH',
-    '/usr/lib/qt6/qml:' .. os.getenv('HOME') .. '/.local/share/qml:' .. os.getenv('HOME') .. '/.config/qml'
+	'QML2_IMPORT_PATH',
+	'/usr/lib/qt6/qml:' .. os.getenv('HOME') .. '/.local/share/qml:' .. os.getenv('HOME') .. '/.config/qml'
 )
 hl.env('QT_AUTO_SCREEN_SCALE_FACTOR', '1')
 hl.env('QT_ENABLE_HIGHDPI_SCALING', '1')
 hl.env('QT_FONT_DPI', '144')
 hl.env('QT_IM_MODULE', 'fcitx5')
-hl.env('QT_QPA_PLATFORM', 'wayland')
+hl.env('QT_QPA_PLATFORM', 'wayland;xcb')
 hl.env('QT_QPA_PLATFORMTHEME', 'qt6ct')
 --hl.env('QT_QUICK_CONTROLS_CONF', '~/.config/qt/qtquickcontrols2.conf')
 hl.env('QT_QUICK_CONTROLS_FALLBACK_STYLE', 'Material')
