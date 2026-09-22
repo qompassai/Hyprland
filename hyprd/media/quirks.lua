@@ -6,7 +6,8 @@
 -- --------------------------------------------------
 ---@source https://wiki.hypr.land/Configuring/Variables/#quirks
 hl.config({
-    quirks = {
-        prefer_hdr = 1,
-    },
+	quirks = {
+		prefer_hdr = 1,
+		skip_non_kms_dmabuf_formats = false,
+	},
 })

@@ -1,6 +1,6 @@
 #!/usr/bin/env lua5.4
 ---@version 5.4
--- /qompassai/hyprland/hypr.d/graphics/electron.lua
+-- /qompassai/hyprland/hyprd/graphics/electron.lua
 -- Qompass AI Hyprland 0.55+ Electron Graphics Config
 -- Copyright (C) 2026 Qompass AI, All rights reserved
 -- ###################################################

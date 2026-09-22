@@ -6,78 +6,79 @@
 -- ###################################################
 ---@source:  https://wiki.hypr.land/Configuring/Gestures/
 hl.config({
-    gestures = {
-        workspace_swipe_distance = 700,
-        workspace_swipe_cancel_ratio = 0.2,
-        workspace_swipe_min_speed_to_force = 5,
-        workspace_swipe_direction_lock = true,
-        workspace_swipe_direction_lock_threshold = 10,
-        workspace_swipe_create_new = true,
-    },
+	gestures = {
+		close_max_timeout = 1000,
+		workspace_swipe_cancel_ratio = 0.5,
+		workspace_swipe_create_new = true,
+		workspace_swipe_direction_lock = true,
+		workspace_swipe_direction_lock_threshold = 10,
+		workspace_swipe_distance = 700,
+		workspace_swipe_min_speed_to_force = 30,
+		workspace_swipe_forever = false,
+		workspace_swipe_invert = true,
+		workspace_swipe_touch = false,
+		workspace_swipe_touch_invert = false,
+		workspace_swipe_use_r = false,
+	},
+	scrolling = { ---@source https://wiki.hypr.land/configuring/core/config-options/#scrolling
+		--move_snap_cursor = true,
+		--move_snap_to_grid = true,
+	},
 })
 
 hl.gesture({
-    action = 'workspace',
-    direction = 'horizontal',
-    fingers = 3,
+	action = 'workspace',
+	direction = 'horizontal',
+	fingers = 3,
 })
 hl.gesture({
-    action = 'close',
-    fingers = 3,
-    direction = 'down',
+	action = 'close',
+	fingers = 3,
+	direction = 'down',
+	mod = 'ALT',
+})
+
+hl.gesture({
+	action = 'fullscreen',
+	fingers = 3,
+	direction = 'up',
+	mod = 'ALT',
+	scale = 1.2,
 })
 hl.gesture({
-    action = 'close',
-    fingers = 3,
-    direction = 'down',
-    mod = 'ALT',
+	fingers = 3,
+	direction = 'pinch',
+	action = 'dispatcher',
+	params = 'exec fuzzel',
 })
 hl.gesture({
-    action = 'fullscreen',
-    fingers = 3,
-    direction = 'up',
+	fingers = 4,
+	direction = 'down',
+	action = 'dispatcher',
+	params = 'exec firefox',
 })
 hl.gesture({
-    action = 'fullscreen',
-    fingers = 3,
-    direction = 'up',
-    mod = 'ALT',
-    scale = 1.2,
+	fingers = 4,
+	direction = 'left',
+	action = 'special',
+	params = 'mySpecialWorkspace',
 })
 hl.gesture({
-    fingers = 3,
-    direction = 'pinch',
-    action = 'dispatcher',
-    params = 'exec fuzzel',
+	fingers = 4,
+	direction = 'right',
+	mod = 'SUPER',
+	scale = 2.0,
+	action = 'float',
 })
 hl.gesture({
-    fingers = 4,
-    direction = 'down',
-    action = 'dispatcher',
-    params = 'exec firefox',
+	fingers = 4,
+	direction = 'up',
+	mod = 'SUPER',
+	scale = 1.5,
+	action = 'float',
 })
 hl.gesture({
-    fingers = 4,
-    direction = 'left',
-    action = 'special',
-    params = 'mySpecialWorkspace',
-})
-hl.gesture({
-    fingers = 4,
-    direction = 'right',
-    mod = 'SUPER',
-    scale = 2.0,
-    action = 'float',
-})
-hl.gesture({
-    fingers = 4,
-    direction = 'up',
-    mod = 'SUPER',
-    scale = 1.5,
-    action = 'float',
-})
-hl.gesture({
-    fingers = 3,
-    direction = 'down',
-    action = 'unset',
+	fingers = 3,
+	direction = 'down',
+	action = 'unset',
 })

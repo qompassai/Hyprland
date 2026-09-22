@@ -18,7 +18,7 @@ hl.env('SYCL_CACHE_THRESHOLD', '7')
 -- hl.env(SYCL_DEVICE_ALLOWLIST,DeviceVendorId:0x10de,DeviceType:GPU,DeviceName:NVIDIA.*,DriverVersion:570.123.07|DeviceVendorId:0x8086,DeviceType:GPU,DeviceName:Intel.*,DriverVersion:25.0.4)
 hl.env('SYCL_DISABLE_EXECUTION_GRAPH_CLEANUP', '1')
 hl.env('SYCL_DISABLE_PARALLEL_FOR_RANGE_ROUNDING', '1')
-hl.env('SYCL_DUMP_IMAGES', '1')
+--hl.env('SYCL_DUMP_IMAGES', '1') --debugging
 hl.env('SYCL_EAGER_INIT', '1')
 hl.env('SYCL_ENABLE_DEFAULT_CONTEXTS', '1') --testing
 hl.env('SYCL_HOST_UNIFIED_MEMORY', '1')

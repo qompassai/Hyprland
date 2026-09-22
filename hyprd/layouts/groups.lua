@@ -3,15 +3,9 @@
 -- Qompass AI Hyprland 0.55+ Layout Groups Config
 -- Copyright (C) 2025 Qompass AI, All rights reserved
 -- ###################################################
----@source References: https://wiki.hypr.land/Configuring/Variables/
 hl.config({
-	group = {
+	group = { ---@source https://wiki.hypr.land/configuring/core/config-options/#scrolling
 		auto_group = true,
-		['col.border_active'] = '0x66ffff00',
-		['col.border_inactive'] = '0x66777700',
-		['col.border_locked_active'] = '0x66ff5500',
-		['col.border_locked_inactive'] = '0x66775500',
-
 		drag_into_group = 1,
 		focus_removed_window = true,
 		group_on_movetoworkspace = false,
@@ -19,12 +13,20 @@ hl.config({
 		merge_floated_into_tiled_on_groupbar = false,
 		merge_groups_on_drag = true,
 		merge_groups_on_groupbar = true,
-		groupbar = {
+		col = {
+			border_active = 0x66ffff00,
+			border_inactive = 0x66777700,
+			border_locked_active = 0x66ff5500,
+			border_locked_inactive = 0x66775500,
+		},
+		groupbar = { ---@source https://wiki.hypr.land/configuring/core/config-options/#groupbar
 			disable_when_only = true,
-			['col.active'] = '0x66ffff00',
-			['col.inactive'] = '0x66777700',
-			['col.locked_active'] = '0x66ff5500',
-			['col.locked_inactive'] = '0x66775500',
+			col = { ---@source https://wiki.hypr.land/configuring/core/config-options/#groupbar-colors
+				active = 0x66ffff00,
+				inactive = 0x66777700,
+				locked_active = 0x66ff5500,
+				locked_inactive = 0x66775500,
+			},
 			enabled = true,
 			font_family = 'DaddyTimeMono Nerd Font Mono',
 			font_size = 8,
@@ -47,7 +49,11 @@ hl.config({
 			scrolling = true,
 			stacked = true,
 			text_color = '0xffffffff',
+			text_color_inactive = '0xffffffff',
+			text_color_locked_active = '0xffffffff',
+			text_color_locked_inactive = '0xffffffff',
 			text_offset = 0,
+			text_padding = 0,
 		},
 	},
 })

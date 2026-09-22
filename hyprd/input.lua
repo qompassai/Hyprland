@@ -7,4 +7,5 @@
 require('hyprd/input/cursor')
 require('hyprd/input/input')
 require('hyprd/input/inputenv')
---require('hypr.d/input/gesture')
+--require('hyprd/input/input-capture')
+--require('hyprd/input/gesture')
