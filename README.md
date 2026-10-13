@@ -147,8 +147,6 @@ Config is organized as parallel `.conf` (legacy hyprlang) and `.lua` (Hyprland 0
 ├── hyprsunset.conf
 ├── hyprtoolkit.conf
 ├── launch.jsonc
-├── LICENSE-AGPL
-├── LICENSE-QCDA
 ├── monitors.conf
 ├── monitors.json
 ├── qompass.jpg
